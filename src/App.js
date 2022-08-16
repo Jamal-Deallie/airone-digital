@@ -1,24 +1,32 @@
 import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+import { theme } from './Styles/theme';
+import {
+  HomePage,
+  TeamPage,
+  ContactPage,
+  AboutPage,
+  NotFoundPage,
+} from './Pages';
+import { MainLayout } from './Layouts';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <Routes>
+          <Route path='/' element={<MainLayout />}>
+            <Route index element={<HomePage />} />
+            <Route path='about' element={<AboutPage />} />
+            <Route path='teams' element={<TeamPage />} />
+            <Route path='contactus' element={<ContactPage />} />
+            {/* 404 route */}
+            <Route path='*' element={<NotFoundPage />} />
+          </Route>
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 }
 
