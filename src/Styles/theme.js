@@ -1,11 +1,11 @@
 export const theme = {
   variant: {
-    primary: '#FE226D',
+    primary: '#56FBFF',
     secondary: '#0d131d',
     tertiary: '#F3F3F3',
   },
   fontFamily: {
-    main: 'Open Sans, sans-serif',
+    main: 'open-sans, sans-serif',
     heading: 'Headline, sans-serif',
   },
   font: {

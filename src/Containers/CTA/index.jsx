@@ -1,7 +1,10 @@
+import { NewsLetterInput } from '../../Components';
+
 export default function CTAContainer() {
   return (
     <div>
-      <h1>CTA Container</h1>
+      <h2>Subscribe To Our Newsletter</h2>
+      <NewsLetterInput />
     </div>
   );
 }

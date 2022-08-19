@@ -7,13 +7,13 @@ import {
   NavContainer,
   FooterContainer,
   FooterInner,
+  SmoothWrapper,
   Spacer,
 } from './styles';
 import { Navigation } from '../../Components';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SmootherContext } from '../../Context/ SmootherContext';
-import { useIsomorphicLayoutEffect } from '../../Hooks/useIsomorphicLayoutEffect';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 
 export default function MainLayout() {
@@ -33,21 +33,21 @@ export default function MainLayout() {
     });
 
     setSmoother(smoother);
-  }, []);
+  }, [smoother, setSmoother]);
 
   return (
-    <SmootherContext.Provider value={smoother}>
-      <StyledLayout>
+    <ContentContainer>
+      <NavContainer>
         <Navigation />
-        <ContentContainer>
-          <main id='smooth-wrapper'>
-            <SmoothContent id='smooth-content'>
-              <Outlet />
-              <Spacer />
-            </SmoothContent>
-          </main>
-        </ContentContainer>
-      </StyledLayout>
-    </SmootherContext.Provider>
+      </NavContainer>
+      <SmootherContext.Provider value={smoother}>
+        <SmoothWrapper id='smooth-wrapper'>
+          <SmoothContent id='smooth-content'>
+            <Outlet />
+            <Spacer />
+          </SmoothContent>
+        </SmoothWrapper>
+      </SmootherContext.Provider>
+    </ContentContainer>
   );
 }

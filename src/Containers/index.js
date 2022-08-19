@@ -6,6 +6,7 @@ export {default as WorkContainer} from './Work'
 export {default as CTAContainer} from './CTA'
 //About
 export {default as StoryContainer} from './Story'
+export {default as AboutContainer} from './About'
 //Team
 export {default as LeadershipContainer} from './Leadership'
 //Contact
