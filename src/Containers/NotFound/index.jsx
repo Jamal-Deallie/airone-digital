@@ -1,8 +1,11 @@
-export default function NotFoundContainer() {
+import { Section, InnerContainer } from './styles';
 
-    return (
-        <div>
-            Not Found Container
-        </div>
-    )
+export default function NotFoundContainer() {
+  return (
+    <Section>
+      <InnerContainer>
+        <h2>404</h2>
+      </InnerContainer>
+    </Section>
+  );
 }

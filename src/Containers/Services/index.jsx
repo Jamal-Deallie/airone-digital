@@ -1,15 +1,15 @@
-import { ServiceSection, InnerContainer, FlexCont } from './styles';
+import { ServiceSection, InnerContainer, } from './styles';
 
 export default function ServicesContainer() {
   return (
     <ServiceSection>
+      <h2 className='heading gradient-subheader'>Our Services Include...</h2>
       <InnerContainer>
-        <h1>Our Services Include...</h1>
-        <FlexCont>
-          <div>
-            <h2>O1</h2>
+        <div className='flex-container'>
+          <div className='number'>
+            <h2 className='outline'>O1</h2>
           </div>
-          <div>
+          <div className='flex-content'>
             <h2>Advertising</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -18,9 +18,9 @@ export default function ServicesContainer() {
               vel, ullamcorper sit amet ligula.
             </p>
           </div>
-        </FlexCont>
-        <FlexCont>
-          <div>
+        </div>
+        <div className='flex-container'>
+          <div className='flex-content'>
             <h2>Advertising</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -29,15 +29,15 @@ export default function ServicesContainer() {
               vel, ullamcorper sit amet ligula.
             </p>
           </div>
-          <div>
-            <h2>O2</h2>
+          <div className='number'>
+            <h2 className='outline'>O2</h2>
           </div>
-        </FlexCont>
-        <FlexCont>
-          <div>
-            <h2>O3</h2>
+        </div>
+        <div className='flex-container'>
+          <div className='number'>
+            <h2 className='outline'>O3</h2>
           </div>
-          <div>
+          <div className='flex-content'>
             <h2>Advertising</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -46,12 +46,9 @@ export default function ServicesContainer() {
               vel, ullamcorper sit amet ligula.
             </p>
           </div>
-        </FlexCont>
-        <FlexCont>
-          <div>
-            <h2>O4</h2>
-          </div>
-          <div>
+        </div>
+        <div className='flex-container'>
+          <div className='flex-content'>
             <h2>Brand Identity</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -60,7 +57,10 @@ export default function ServicesContainer() {
               vel, ullamcorper sit amet ligula.
             </p>
           </div>
-        </FlexCont>
+          <div className='number'>
+            <h2 className='outline'>O4</h2>
+          </div>
+        </div>
       </InnerContainer>
     </ServiceSection>
   );

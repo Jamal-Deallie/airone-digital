@@ -4,7 +4,7 @@ export const NavContainer = styled('div')({
   height: '10rem',
   width: '100%',
   position: 'fixed',
-  backgroundColor: '#038C25',
+  // backgroundColor: '#038C25',
 });
 
 export const ContentContainer = styled('div')``;
@@ -18,13 +18,13 @@ export const SmoothContainer = styled('div')``;
 export const SmoothContent = styled.section`
   overflow: visible;
   width: 100%;
-  height: 400vh;
+  min-height: 400vh;
 `;
 
 export const SmoothWrapper = styled.div`
   position: absolute;
   top: 10rem !important;
-  background: ${props => props.theme.variant.secondary};
+  /* background: ${props => props.theme.variant.secondary}; */
   z-index: 100;
   width: 100%;
 `;

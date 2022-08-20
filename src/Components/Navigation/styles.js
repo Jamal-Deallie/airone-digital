@@ -6,7 +6,6 @@ export const Header = styled.nav`
   top: 0;
   width: 100%;
   padding: 2.3rem 0 0.5rem;
-  background: ${props => props.theme.variant.secondary};
   color: ${props => props.theme.variant.primary};
   z-index: 1;
   height: 10rem;

@@ -1,6 +1,6 @@
 import { WorkSection, InnerContainer, ImageGrid, VideoGrid } from './styles';
 
-export default function WorkContainer() {
+export default function AwardsContainer() {
   return (
     <WorkSection>
       <InnerContainer>

@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 export const HeroSection = styled.section`
+  padding-top: 5%;
   position: relative;
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
+  background-color: transparent;
   .hero_subheader {
     position: relative;
     color: red;

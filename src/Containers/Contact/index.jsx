@@ -1,8 +1,13 @@
-export default function ContactContainer() {
-    return (
+import { InnerContainer, Section } from './styles';
+import { ContactForm } from '../../Components';
 
-        <div>
-            <h1>Contact Container</h1>
-        </div>
-    )
+export default function ContactContainer() {
+  return (
+    <Section>
+      <InnerContainer>
+        <h2 className='gradient-subheader'>Contact Us</h2>
+        <ContactForm />
+      </InnerContainer>
+    </Section>
+  );
 }

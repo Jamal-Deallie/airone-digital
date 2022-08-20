@@ -1,8 +1,9 @@
 import {
   HeroContainer,
   StoryContainer,
-  WorkContainer,
   ServicesContainer,
+  MissionContainer,
+  WorkContainer,
   CTAContainer,
 } from '../../Containers';
 
@@ -11,8 +12,9 @@ export default function HomePage() {
     <>
       <HeroContainer />
       <StoryContainer />
-      <WorkContainer />
       <ServicesContainer />
+      <MissionContainer />
+      <WorkContainer />
       <CTAContainer />
     </>
   );

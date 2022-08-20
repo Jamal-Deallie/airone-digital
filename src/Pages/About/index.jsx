@@ -1,9 +1,17 @@
-import { StoryContainer } from '../../Containers';
+import {
+  AboutContainer,
+  ApproachContainer,
+  CultureContainer,
+  ValuesContainer,
+} from '../../Containers';
 
 export default function AboutPage() {
   return (
     <>
-      <StoryContainer />
+      <AboutContainer />
+      <ValuesContainer />
+      <ApproachContainer />
+      <CultureContainer />
     </>
   );
 }

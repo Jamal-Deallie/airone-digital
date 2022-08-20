@@ -1,6 +1,6 @@
 export const theme = {
   variant: {
-    primary: '#56FBFF',
+    primary: '#3494e6',
     secondary: '#0d131d',
     tertiary: '#F3F3F3',
   },
