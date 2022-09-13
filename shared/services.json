@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "subheader": "BRAND",
+    "caption": "Strategy • Logo & Identity • Visual language • Guidelines Design Systems",
+    "image": "/icons/brand.svg",
+    "reverse": false
+  },
+  {
+    "id": 2,
+    "subheader": "CREATIVE",
+    "caption": "UI & UX • Web Design • Print Design • Consulting",
+    "image": "/icons/creative.svg",
+    "reverse": true
+  },
+  {
+    "id": 3,
+    "subheader": "WEB",
+    "caption": "Front End • Back End • Bespoke Integrations • Ecommerce • CMS • Spektrix",
+    "image": "/icons/web.svg",
+    "reverse": false
+  },
+  {
+    "id": 4,
+    "subheader": "STRATEGY",
+    "caption": "Social Media • Inbound Marketing • Copywriting • Visual Content • Campaigns",
+    "image": "/icons/strategy.svg",
+    "reverse": true
+  }
+]

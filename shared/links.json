@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "label": "About",
+    "src": "about"
+  },
+  {
+    "id": 2,
+    "label": "Team",
+    "src": "team"
+  },
+  {
+    "id": 3,
+    "label": "Work",
+    "src": "work"
+  },
+  {
+    "id": 4,
+    "label": "Contact",
+    "src": "Contact"
+  }
+]
