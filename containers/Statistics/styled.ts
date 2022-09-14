@@ -5,21 +5,21 @@ type Props = { reverse?: boolean };
 export const InnerContainer = styled.div<Props>`
   height: 100%;
   width: 100%;
-  padding-top: var(--space-2xxl);
+  padding-top: var(--space-3xl);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   justify-items: center;
   align-items: center;
   gap: 2rem;
   margin-inline: auto;
-  .service__flex-cont {
+  .stats__flex-cont {
     width: 100%;
   }
 
-  .services__icon-cont {
+  .stats__icon-cont {
     margin-top: var(--space-m);
   }
-  .services__icon-cont:nth-of-type(1) {
+  .stats__icon-cont:nth-of-type(1) {
     position: relative;
     width: 13rem;
     height: 13rem;
@@ -27,13 +27,18 @@ export const InnerContainer = styled.div<Props>`
     height: auto;
     margin-inline: auto;
   }
-  .service__desc {
-    border-right: 3px solid ${props => props.theme.colors.secondary};
+  .stats__grid-cont {
+    border-left: 3px solid ${props => props.theme.colors.primary};
     width: 100%;
     height: max-content;
     max-width: 55rem;
     padding: var(--space-m);
   }
+`;
+
+export const SubheaderContainer = styled.div`
+  max-width: 65rem;
+  margin-inline: auto;
 `;
 
 export const GridContainer = styled.div<Props>`

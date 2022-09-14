@@ -9,7 +9,7 @@ export const GlobalStyles = createGlobalStyle`
   --space-m: clamp(2.00rem, calc(1.90rem + 0.49vw), 2.25rem);
   --space-l: clamp(2.63rem, calc(2.48rem + 0.73vw), 3.00rem);
   --space-xl: clamp(3.94rem, calc(3.72rem + 1.10vw), 4.50rem);
-  --space-2xl: clamp(5.25rem, calc(4.96rem + 1.46vw), 6.00rem);
+  --space-2xxl: clamp(5.25rem, calc(4.96rem + 1.46vw), 6.00rem);
   --space-3xl: clamp(7.88rem, calc(7.44rem + 2.20vw), 9.00rem);
 
   /* One-up pairs */
@@ -68,7 +68,7 @@ html {
 }
 
 .section{
-padding-top: var(--space-2xl); 
+  padding: var(--space-3xl) 0;
 width: 100%; 
 height: 100%;
 }

@@ -35,7 +35,7 @@ const Showreel = (props: Props) => {
           <Header
             className='color_changer-text'
             fontSize={'clamp(1.14rem, calc(-9.97rem + 44.45vw), 43.37rem)'}
-            lineHeight={0.95}>
+            lineHeight={0.9}>
             BIG
           </Header>
         </div>

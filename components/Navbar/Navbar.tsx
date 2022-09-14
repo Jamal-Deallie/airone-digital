@@ -1,3 +1,4 @@
+import Menu from '../../components/Menu/Menu';
 import { StyledNav, Logo, InnerContainer } from './styles';
 
 type Props = {
@@ -8,7 +9,7 @@ export const Navbar = () => {
   return (
     <StyledNav>
       <InnerContainer>
-        <button>menu</button>
+        <Menu />
         <Logo>Airone</Logo>
       </InnerContainer>
     </StyledNav>

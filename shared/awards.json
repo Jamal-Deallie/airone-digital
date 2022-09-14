@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "image": "/images/effie.png",
+    "award": "Society for Experiential Graphic Designs Award"
+  },
+  {
+    "id": 2,
+    "image": "/images/dandad.svg",
+    "award": "Society for Experiential Graphic Designs Award"
+  },
+  {
+    "id": 3,
+    "image": "/images/segd.svg",
+    "award": "Society for Experiential Graphic Designs Award"
+  },
+  {
+    "id": 4,
+    "image": "/images/clio.png",
+    "award": "Society for Experiential Graphic Designs Award"
+  }
+]

@@ -9,7 +9,7 @@ export const InnerContainer = styled.div`
   max-width: 120rem;
   margin-inline: auto;
   padding-inline: var(--space-m);
-  margin-top: var(--space-xl-xl);
+  padding-top: var(--space-2xl);
 `;
 
 export const ScrollContainer = styled.div`

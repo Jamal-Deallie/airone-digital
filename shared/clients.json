@@ -1,0 +1,187 @@
+[
+  {
+    "id": 1,
+    "client": "HBO",
+    "icon": false
+  },
+  {
+    "id": 2,
+    "client": "NIKE",
+    "icon": false
+  },
+  {
+    "id": 3,
+    "client": "GOOGLE",
+    "icon": false
+  },
+  {
+    "id": 4,
+    "client": "AMAZON",
+    "icon": false
+  },
+  {
+    "id": 5,
+    "client": "DEWALT",
+    "icon": false
+  },
+  {
+    "id": 6,
+    "client": "PUMA",
+    "icon": false
+  },
+  {
+    "id": 7,
+    "client": "APPLE",
+    "icon": false
+  },
+  {
+    "id": 8,
+    "client": "ASM",
+    "icon": false
+  },
+  {
+    "id": 9,
+    "client": "NASDAQ",
+    "icon": false
+  },
+  {
+    "id": 10,
+    "client": "NBC",
+    "icon": false
+  },
+  {
+    "id": 11,
+    "client": "tesla",
+    "icon": false
+  },
+  {
+    "id": 12,
+    "client": "ADOBE",
+    "icon": false
+  },
+  {
+    "id": 13,
+    "client": "3M",
+    "icon": false
+  },
+  {
+    "id": 14,
+    "client": "WWE",
+    "icon": false
+  },
+  {
+    "id": 15,
+    "client": "The LA Times",
+    "icon": false
+  },
+  {
+    "id": 16,
+    "client": "ETSY",
+    "icon": false
+  },
+  {
+    "id": 17,
+    "client": "DEF JAM",
+    "icon": false
+  },
+  {
+    "id": 17,
+    "client": "Air Canada",
+    "icon": false
+  },
+  {
+    "id": 18,
+    "client": "Alfa Romeo",
+    "icon": false
+  },
+  {
+    "id": 19,
+    "client": "Verizon",
+    "icon": false
+  },
+  {
+    "id": 20,
+    "client": "NBC",
+    "icon": false
+  },
+  {
+    "id": 21,
+    "client": "TESLA",
+    "icon": false
+  },
+  {
+    "id": 22,
+    "client": "ADOBE",
+    "icon": false
+  },
+  {
+    "id": 23,
+    "client": "3M",
+    "icon": false
+  },
+  {
+    "id": 24,
+    "client": "WWE",
+    "icon": false
+  },
+  {
+    "id": 25,
+    "client": "The LA Times",
+    "icon": false
+  },
+  {
+    "id": 26,
+    "client": "ETSY",
+    "icon": false
+  },
+  {
+    "id": 27,
+    "client": "DEF JAM",
+    "icon": false
+  },
+  {
+    "id": 28,
+    "client": "Air Canada",
+    "icon": false
+  },
+  {
+    "id": 29,
+    "client": "Alfa Romeo",
+    "icon": false
+  },
+  {
+    "id": 30,
+    "client": "Verizon",
+    "icon": false
+  },
+  {
+    "id": 31,
+    "client": "HBO",
+    "icon": false
+  },
+  {
+    "id": 32,
+    "client": "NIKE",
+    "icon": false
+  },
+  {
+    "id": 33,
+    "client": "GOOGLE",
+    "icon": false
+  },
+  {
+    "id": 34,
+    "client": "AMAZON",
+    "icon": false
+  },
+  {
+    "id": 35,
+    "client": "DEWALT",
+    "icon": false
+  },
+  {
+    "id": 36,
+    "client": "PUMA",
+    "icon": false
+  }
+]

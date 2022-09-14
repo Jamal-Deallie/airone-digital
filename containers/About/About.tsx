@@ -1,11 +1,11 @@
 import { Header } from '../../components/Header/Header';
-import { InnerContainer } from './styled';
+import { InnerContainer, Section } from './styled';
 import BodyText from '../../components/BodyText/BodyText';
 type Props = {};
 
 const About = (props: Props) => {
   return (
-    <section>
+    <section className='section'>
       <div className='container'>
         <InnerContainer>
           <Header

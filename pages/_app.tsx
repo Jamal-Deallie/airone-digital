@@ -4,6 +4,7 @@ import { GlobalStyles } from '../styles/global';
 import theme from '../styles/theme';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+import { Layout } from '../components/Layout/Layout';
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 
@@ -60,11 +61,13 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
       }
     });
   });
-  return getLayout(
+  return (
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </ThemeProvider>
     </>
   );

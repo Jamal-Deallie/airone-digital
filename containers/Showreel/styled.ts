@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const InnerContainer = styled.div`
   height: 100%;
   width: 100%;
-  padding-top: var(--space-2xl);
   .reel__flex {
     display: grid;
     grid-template-columns: 1fr 3fr;

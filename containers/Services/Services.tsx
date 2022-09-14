@@ -1,7 +1,5 @@
-import { ComponentProps } from 'react';
 import { InnerContainer, GridContainer, DescContainer } from './styled';
 import { Header } from '../../components/Header/Header';
-import BodyText from '../../components/BodyText/BodyText';
 import Image from 'next/image';
 import data from '../../shared/services.json';
 
@@ -36,7 +34,7 @@ const Services = () => {
                   />
                 </div>
               </GridContainer>
-              <DescContainer reverse={reverse}>
+              <DescContainer reverse={reverse} className='service__desc'>
                 <Header
                   className='service__desc service__text'
                   fontSize='1.953rem'
