@@ -74,7 +74,7 @@ height: 100%;
 }
 
 .bg-primary{
-  background-color: #A682FA;
+  background-color: #AC7EF3;
 }
 
 input,

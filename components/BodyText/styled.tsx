@@ -7,4 +7,5 @@ export const Text = styled(PageText)`
   font-family: ${props =>
     props.fontFamily ? props.theme.fontFamily : 'Open Sans, sans-serif'};
   text-align: ${props => props.textAlign && props.textAlign};
+  font-weight: ${props => props.fontWeight && props.fontWeight};
 `;

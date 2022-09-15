@@ -28,11 +28,14 @@ export const InnerContainer = styled.div<Props>`
     margin-inline: auto;
   }
   .service__desc {
-    border-right: 3px solid ${props => props.theme.colors.secondary};
     width: 100%;
     height: max-content;
     max-width: 55rem;
     padding: var(--space-m);
+
+    h3 {
+      border-left: 3px solid ${props => props.theme.colors.secondary};
+    }
   }
 `;
 

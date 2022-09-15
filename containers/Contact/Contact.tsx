@@ -2,6 +2,7 @@ import React from 'react';
 import { Header } from '../../components/Header/Header';
 import { InnerContainer, HeaderContainer } from './styled';
 import Link from 'next/link';
+import BodyText from '../../components/BodyText/BodyText';
 type Props = {};
 
 const Contact = (props: Props) => {
@@ -40,6 +41,45 @@ const Contact = (props: Props) => {
               </Header>
             </a>
           </Link>
+          <div className='link-cont'>
+            <Link href='/'>
+              <a>
+                <BodyText fontWeight={800} fontSize={'1.6rem'}>
+                  DRIBBLE
+                </BodyText>
+              </a>
+            </Link>
+            <BodyText fontWeight={800} fontSize={'1.6rem'}>
+              •
+            </BodyText>
+            <Link href='/'>
+              <a>
+                <BodyText fontWeight={800} fontSize={'1.6rem'}>
+                  INSTAGRAM
+                </BodyText>
+              </a>
+            </Link>
+            <BodyText fontWeight={800} fontSize={'1.6rem'}>
+              •
+            </BodyText>
+            <Link href='/'>
+              <a>
+                <BodyText fontWeight={800} fontSize={'1.6rem'}>
+                  BEHANCE
+                </BodyText>
+              </a>
+            </Link>
+            <BodyText fontWeight={800} fontSize={'1.6rem'}>
+              •
+            </BodyText>
+            <Link href='/'>
+              <a>
+                <BodyText fontWeight={800} fontSize={'1.6rem'}>
+                  TIK TOK
+                </BodyText>
+              </a>
+            </Link>
+          </div>
         </InnerContainer>
       </div>
     </section>

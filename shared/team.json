@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "image": "/images/emp-3.png",
+    "name": "Name",
+    "title": "Title",
+    "desc": "Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in",
+    "reverse": false
+  },
+
+  {
+    "id": 2,
+    "image": "/images/emp-1.png",
+    "name": "Name",
+    "title": "Title",
+    "desc": "Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in",
+    "reverse": true
+  },
+
+  {
+    "id": 3,
+    "image": "/images/emp-2.png",
+    "name": "Name",
+    "title": "Title",
+    "desc": "Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in",
+    "reverse": false
+  },
+
+  {
+    "id": 4,
+    "image": "/images/emp-4.png",
+    "name": "Name",
+    "title": "Title",
+    "desc": "Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in",
+    "reverse": true
+  },
+  {
+    "id": 5,
+    "image": "/images/emp-5.png",
+    "name": "Name",
+    "title": "Title",
+    "desc": "Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in",
+    "reverse": false
+  }
+]

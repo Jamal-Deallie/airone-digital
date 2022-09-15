@@ -7,6 +7,7 @@ type Props = {
   children: ReactNode;
   textAlign?: string;
   fontFamily?: string;
+  fontWeight?: number;
 };
 
 export const PageText = ({ className, children }: Props) => {
