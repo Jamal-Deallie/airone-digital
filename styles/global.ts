@@ -26,12 +26,21 @@ export const GlobalStyles = createGlobalStyle`
   /* Custom pairs */
   --space-s-l: clamp(1.31rem, calc(0.65rem + 3.29vw), 3.00rem);
   --space-xl-xl: clamp(3.94rem, calc(2.84rem + 5.49vw), 6.75rem);
+
+
+  --space-3xxxl: clamp(12.38rem, calc(2.03rem + 35.71vw), 33.75rem);
+  --space-xxxs: clamp(1.00rem, calc(-0.07rem + 5.37vw), 3.75rem);
+  --space-xxl: clamp(4.13rem, calc(1.34rem + 13.90vw), 11.25rem);
+  --space-xxs: clamp(1.56rem, calc(0.51rem + 5.24vw), 4.25rem);
 }
 
 .flow > * + * {
   margin-top: var(--flow-space, 1em);
 }
 
+.no-scroll {
+  overflow: hidden !important;
+}
 * {
     margin: 0;
     padding: 0;
@@ -59,6 +68,7 @@ html {
   vertical-align: baseline;
 } 
 
+
 .container{
   position: relative;
   max-width: 120rem;
@@ -68,7 +78,7 @@ html {
 }
 
 .section{
-  padding: var(--space-3xl) 0;
+padding: var(--space-3xl) 0;
 width: 100%; 
 height: 100%;
 }
@@ -80,7 +90,7 @@ height: 100%;
 input,
 textarea,
 select {
-   all: revert;
+   /* all: revert; */
 }
 
 ol, ul {
@@ -166,14 +176,17 @@ a, a:hover, a:focus, a:active {
 
 h1{
   line-height: 1;
+
 }
 
 h2{
   line-height: 1.2;
+  letter-spacing: 1.5px; 
 }
 
 h3{
   line-height: 1.3;
+  letter-spacing: .5px; 
 }
 
 p{

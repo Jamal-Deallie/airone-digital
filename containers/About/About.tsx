@@ -1,6 +1,7 @@
 import { Header } from '../../components/Header/Header';
-import { InnerContainer, Section } from './styled';
+import { InnerContainer } from './styled';
 import BodyText from '../../components/BodyText/BodyText';
+import SplitTextLine from '../../animations/SplitTextLine';
 type Props = {};
 
 const About = (props: Props) => {
@@ -8,12 +9,16 @@ const About = (props: Props) => {
     <section className='section'>
       <div className='container'>
         <InnerContainer>
-          <Header
-            fontSize={'clamp(2.33rem, calc(1.39rem + 4.70vw), 8rem)'}
-            headingLevel={'h2'}
-            lineHeight={1}>
-            We don’t care just about design. We care about you.
-          </Header>
+ 
+            <Header
+              className='about__header'
+              fontSize={'clamp(2.33rem, calc(1.39rem + 4.70vw), 8rem)'}
+              headingLevel={'h2'}
+              lineHeight={1}>
+              We don’t care just about design. We care about you.
+            </Header>
+
+
           <div className='about__text'>
             <BodyText>
               Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.

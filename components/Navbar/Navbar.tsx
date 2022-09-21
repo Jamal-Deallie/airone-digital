@@ -1,6 +1,6 @@
 import Menu from '../../components/Menu/Menu';
 import { StyledNav, Logo, InnerContainer } from './styles';
-
+import Link from 'next/link';
 type Props = {
   color?: string;
 };
@@ -10,7 +10,11 @@ export const Navbar = () => {
     <StyledNav>
       <InnerContainer>
         <Menu />
-        <Logo>Airone</Logo>
+        <Link href='/'>
+          <a>
+            <Logo>Airone</Logo>
+          </a>
+        </Link>
       </InnerContainer>
     </StyledNav>
   );

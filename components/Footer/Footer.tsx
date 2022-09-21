@@ -55,7 +55,7 @@ export const Footer = () => {
               </BodyText>
             </a>
           </Link>
-          <Link href='about'>
+          <Link href='work'>
             <a>
               <BodyText fontSize='clamp(1.17rem, calc(1.07rem + 0.41vw), 1.56rem)'>
                 Work

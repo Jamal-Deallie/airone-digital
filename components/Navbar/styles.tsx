@@ -4,22 +4,22 @@ import { PageText } from '../../helpers/PageText';
 export const StyledNav = styled.nav`
   height: 10rem;
   background-color: transparent;
-  position: fixed;
-  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 10;
+  position: fixed;
+  z-index: 2;
 `;
 
 export const InnerContainer = styled.div`
   height: 10rem;
   width: 100%;
+  position: relative;
 `;
 
 export const Logo = styled.span`
   font-family: Headline, sans-serif;
-  -webkit-text-stroke: 1.5px #1a1b1d;
+  -webkit-text-stroke: 1.5px ${props => props.theme.colors.secondary};
   -webkit-text-fill-color: transparent;
   -webkit-font-smoothing: subpixel-antialiased;
   font-size: 3.8rem;
@@ -29,5 +29,9 @@ export const Logo = styled.span`
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
-  z-index: 10;
+  cursor: pointer;
+  &:hover {
+    -webkit-text-stroke: none;
+    -webkit-text-fill-color: ${props => props.theme.colors.secondary};
+  }
 `;

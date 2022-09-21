@@ -16,31 +16,37 @@ function TeamMembers({}: Props) {
   return (
     <section className='bg-primary'>
       <div className='container'>
-        <BodyText>
-          The nice thing about teamwork is that you always have others…
-        </BodyText>
         <HeaderContainer>
-          <Header
-            color='secondary'
-            fontSize={'clamp(2.33rem, calc(1.39rem + 4.70vw), 8rem)'}
-            headingLevel={'h2'}
-            lineHeight={1}>
-            ON
-          </Header>
-          <Header
-            color='secondary'
-            fontSize={'clamp(2.33rem, calc(1.39rem + 4.70vw), 8rem)'}
-            headingLevel={'h2'}
-            lineHeight={1}>
-            YOUR
-          </Header>
-          <Header
-            color='secondary'
-            fontSize={'clamp(2.33rem, calc(1.39rem + 4.70vw), 8rem)'}
-            headingLevel={'h2'}
-            lineHeight={1}>
-            SIDE
-          </Header>
+          <InnerContainer className='team__header'>
+            <BodyText textAlign='center' className='team__subheader'>
+              The nice thing about teamwork is that you always have others…
+            </BodyText>
+            <Header
+              color='secondary'
+              textAlign='center'
+              fontSize={'clamp(2.33rem, calc(0.85rem + 7.43vw), 9.77rem)'}
+              headingLevel={'h2'}
+              lineHeight={1}>
+              ON
+            </Header>
+            <Header
+              color='secondary'
+              textAlign='center'
+              fontSize={'clamp(2.33rem, calc(1.39rem + 4.70vw), 8rem)'}
+              headingLevel={'h2'}
+              lineHeight={1}>
+              YOUR
+            </Header>
+            <Header
+
+              color='secondary'
+              textAlign='center'
+              fontSize={'clamp(1.14rem, calc(-9.97rem + 44.45vw), 43.37rem)'}
+              lineHeight={0.9}
+              headingLevel={'h1'}>
+              SIDE
+            </Header>
+          </InnerContainer>
         </HeaderContainer>
         <InnerContainer>
           {data.map(d => {

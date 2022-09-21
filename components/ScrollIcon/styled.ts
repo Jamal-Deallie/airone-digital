@@ -10,6 +10,13 @@ const opacity = keyframes`
 100% { opacity: 0;} 
 `;
 
+export const Container = styled.div`
+  width: 40px;
+  height: 70px;
+  position: relative;
+  margin-inline: auto;
+`;
+
 export const IconScroll = styled.div`
   position: absolute;
   left: 50%;
@@ -35,4 +42,3 @@ export const IconScroll = styled.div`
     left: 50%;
   }
 `;
-

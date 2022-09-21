@@ -1,5 +1,12 @@
-import Document, { DocumentContext, DocumentInitialProps } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+  DocumentInitialProps,
+} from 'next/document';
 
 export default class MyDocument extends Document {
   static async getInitialProps(
@@ -28,4 +35,5 @@ export default class MyDocument extends Document {
       sheet.seal();
     }
   }
+ 
 }

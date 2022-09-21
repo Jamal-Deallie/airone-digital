@@ -2,21 +2,33 @@
   {
     "id": 1,
     "label": "About",
-    "src": "about"
+    "href": "about",
+    "fontSize": "clamp(3.39rem, calc(0.55rem + 11.39vw), 14.21rem)",
+    "color": "secondary",
+    "cn": "menu__link"
   },
   {
     "id": 2,
     "label": "Team",
-    "src": "team"
+    "href": "team",
+    "fontSize": "clamp(3.39rem, calc(0.55rem + 11.39vw), 14.21rem)",
+    "color": "secondary",
+    "cn": "menu__link"
   },
   {
     "id": 3,
     "label": "Work",
-    "src": "work"
+    "href": "work",
+    "fontSize": "clamp(3.39rem, calc(0.55rem + 11.39vw), 14.21rem)",
+    "color": "secondary",
+    "cn": "menu__link"
   },
   {
     "id": 4,
     "label": "Contact",
-    "src": "Contact"
+    "href": "Contact",
+    "fontSize": "clamp(3.39rem, calc(0.55rem + 11.39vw), 14.21rem)",
+    "color": "secondary",
+    "cn": "menu__link"
   }
 ]

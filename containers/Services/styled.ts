@@ -7,11 +7,14 @@ export const InnerContainer = styled.div<Props>`
   width: 100%;
   padding-top: var(--space-2xxl);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   align-items: center;
   gap: 2rem;
   margin-inline: auto;
+  @media only screen and (max-width: 800px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
   .service__flex-cont {
     width: 100%;
   }
@@ -33,16 +36,25 @@ export const InnerContainer = styled.div<Props>`
     max-width: 55rem;
     padding: var(--space-m);
 
-    h3 {
+    p.service__desc {
       border-left: 3px solid ${props => props.theme.colors.secondary};
+      @media only screen and (max-width: 800px) {
+        border-left: none;
+      }
     }
   }
 `;
 
 export const GridContainer = styled.div<Props>`
   order: ${(props: Props) => (props.reverse === true ? 2 : 1)};
+  @media only screen and (max-width: 800px) {
+    order: 1;
+  }
 `;
 
 export const DescContainer = styled.div<Props>`
   order: ${(props: Props) => (props.reverse === true ? 1 : 2)};
+  @media only screen and (max-width: 800px) {
+    order: 2;
+  }
 `;

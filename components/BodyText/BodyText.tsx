@@ -6,7 +6,9 @@ type Props = {
   color?: string;
   fontSize?: string;
   textAlign?: string;
+  className?: string;
   fontWeight?: number;
+  textTrans?: string;
 };
 
 const BodyText = ({
@@ -15,13 +17,18 @@ const BodyText = ({
   fontSize,
   textAlign,
   fontWeight,
+  className,
+  textTrans
 }: Props) => {
   return (
     <Text
+      className={className}
       color={color}
       fontSize={fontSize}
       textAlign={textAlign}
-      fontWeight={fontWeight}>
+      fontWeight={fontWeight}
+      textTrans={textTrans}
+      >
       {children}
     </Text>
   );

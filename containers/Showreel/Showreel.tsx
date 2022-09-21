@@ -1,10 +1,10 @@
 import { Header } from '../../components/Header/Header';
 import { InnerContainer } from './styled';
-type Props = {};
+import ColorChange from '../../animations/ColorChange';
 
-const Showreel = (props: Props) => {
+const Showreel = () => {
   return (
-    <section className='color_changer section' data-color='#A682FA'>
+    <ColorChange bgColor='#AC7EF3' ftTarget={'.reel__text'} ftColor={'#1A1B1D'}>
       <div className='container'>
         <InnerContainer>
           <div className='reel__flex'>
@@ -15,14 +15,14 @@ const Showreel = (props: Props) => {
             </div>
             <div className='reel_heading-line'>
               <Header
-                className='color_changer-text'
+                className='reel__text'
                 fontSize={'clamp(2.33rem, calc(0.85rem + 7.43vw), 19.77rem)'}
                 headingLevel={'h1'}>
                 We
               </Header>
 
               <Header
-                className='color_changer-text'
+                className='reel__text'
                 fontSize={'clamp(2.33rem, calc(0.85rem + 7.43vw), 9.77rem)'}
                 headingLevel={'h1'}
                 lineHeight={0.9}>
@@ -33,14 +33,14 @@ const Showreel = (props: Props) => {
         </InnerContainer>
         <div>
           <Header
-            className='color_changer-text'
+            className='reel__text'
             fontSize={'clamp(1.14rem, calc(-9.97rem + 44.45vw), 43.37rem)'}
             lineHeight={0.9}>
             BIG
           </Header>
         </div>
       </div>
-    </section>
+    </ColorChange>
   );
 };
 

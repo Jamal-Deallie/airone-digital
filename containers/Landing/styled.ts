@@ -2,47 +2,59 @@ import styled from 'styled-components';
 
 export const Section = styled.section`
   height: 100vh;
+  position: relative;
+  width: 100%;
 `;
 
 export const InnerContainer = styled.div`
   position: relative;
   max-width: 120rem;
   margin-inline: auto;
-  padding-inline: var(--space-m);
   padding-top: var(--space-2xl);
 `;
 
 export const ScrollContainer = styled.div`
-  margin-top: var(--space-xl);
-  z-index: 1;
+  padding-top: var(--space-m);
+  width: 40px;
+  height: 70px;
+  margin-inline: auto;
   position: relative;
 `;
 
 export const HeadingContainer = styled.div`
-  z-index: 1;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  h1 {
-    grid-column: 1 / span 3;
-    grid-row: 1 / span 3;
+  height: auto;
+  position: relative;
+  .landing__header {
+    height: max-content;
+    width: 100%;
   }
-  .landing__img-cont:nth-of-type(1) {
-    width: 9vw;
+
+  .landing__header > span {
+    font-size: clamp(3.39rem, calc(0.55rem + 11.39vw), 14.21rem);
+  }
+
+  .landing__header > span:nth-of-type(1)::before {
+    display: inline-block;
+    position: absolute;
+    height: 5vh;
+    width: auto;
+    margin-right: 3vh;
+    content: '';
+    background: url(images/ufo.png) no-repeat 0 0;
+    background-size: 10vh auto;
     aspect-ratio: 812/345;
-    position: relative;
-    right: -12vw;
-    bottom: -5vh;
-    rotate: 15deg;
-    grid-column: 3 / span 1;
-    grid-row: 3 / span 1;
-    @media only screen and (max-width: 600px) {
-      right: -5vw;
-      bottom: -5vh;
-      width: 17vw;
-    }
   }
+
+  .landing__img-cont:nth-of-type(1) {
+    height: 4vh;
+    width: auto;
+    aspect-ratio: 812/345;
+    position: absolute;
+    grid-column: 8 / span 1;
+    grid-row: 4 / span 1;
+  }
+
   .landing__img-cont:nth-of-type(2) {
     width: 5vw;
     aspect-ratio: 337/270;
