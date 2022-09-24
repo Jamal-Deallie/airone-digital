@@ -26,7 +26,7 @@
   {
     "id": 4,
     "label": "Contact",
-    "href": "Contact",
+    "href": "contact",
     "fontSize": "clamp(3.39rem, calc(0.55rem + 11.39vw), 14.21rem)",
     "color": "secondary",
     "cn": "menu__link"

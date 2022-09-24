@@ -1,13 +1,13 @@
-import type { ReactElement, Fragment } from 'react';
-import type { NextPageWithLayout } from './_app';
-import { Layout } from '../components/Layout/Layout';
 import Landing from '../containers/Landing/Landing';
-import About from '../containers/About/About';
 import Showreel from '../containers/Showreel/Showreel';
 import Services from '../containers/Services/Services';
 import Contact from '../containers/Contact/Contact';
+import dynamic from 'next/dynamic';
+const About = dynamic(() => import('../containers/About/About'), {
+  ssr: false,
+});
 
-const HomePage: NextPageWithLayout = () => {
+const HomePage = () => {
   return (
     <>
       <Landing />
@@ -17,10 +17,6 @@ const HomePage: NextPageWithLayout = () => {
       <Contact />
     </>
   );
-};
-
-HomePage.getLayout = function getLayout(page: ReactElement) {
-  return <Layout>{page}</Layout>;
 };
 
 export default HomePage;

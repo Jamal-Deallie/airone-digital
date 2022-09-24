@@ -1,4 +1,9 @@
-import { InputHTMLAttributes, FormEvent, useState } from 'react';
+import {
+  InputHTMLAttributes,
+  FormEvent,
+  useState,
+  SyntheticEvent,
+} from 'react';
 import { FormWrap } from './styled';
 import Button from '../Button/Button';
 
@@ -10,11 +15,8 @@ interface FormProps extends InputHTMLAttributes<HTMLInputElement> {
   wrapperClass?: string;
   className?: string;
   length?: number;
+  formData?: {};
 }
-
-const onSubmit = (e: FormEvent) => {
-  e.preventDefault(); // Prevent the redirect
-};
 
 const Form = ({
   name,
@@ -24,30 +26,34 @@ const Form = ({
   register,
   error,
 }: FormProps) => {
+  
+  const onSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = {};
+
+    Array.from(event.currentTarget.elements).forEach(field => {
+      if (!(field as HTMLInputElement).name) return;
+      formData[(field as HTMLInputElement).name] = (
+        field as HTMLInputElement
+      ).value;
+    });
+
+    fetch('/api/email', {
+      method: 'post',
+      body: JSON.stringify(formData),
+    });
+  };
+
   return (
-    <form action='#' method='post' onSubmit={onSubmit} className='container'>
+    <form method='post' className='container' onSubmit={onSubmit}>
       <FormWrap>
         <div className='form__input'>
-          {/* {label && <label htmlFor={name}>{label}</label>}
-      <input
-        aria-invalid={error ? "true" : "false"}
-        {...register(name)}
-        {...rest}
-      />
-      {error && <span role="alert">{error}</span>} */}
-          <input
-            type='text'
-            name='name'
-            id='name'
-            placeholder='Name'
-            required={true}
-          />
+          <input type='text' name='name' placeholder='Name' required={true} />
         </div>
         <div className='form__input'>
           <input
             type='text'
             name='phoneNumber'
-            id='phoneNumber'
             placeholder='Phone Number'
             required={true}
           />
@@ -55,28 +61,13 @@ const Form = ({
         <div className='form__input'>
           <input
             type='email'
-            name=''
-            id='email'
+            name='email'
             placeholder='Email'
             required={true}
           />
         </div>
-        <div className='form__input'>
-          <input
-            type='text'
-            name=''
-            id='name'
-            placeholder='name'
-            required={true}
-          />
-        </div>
         <div className='form__input message'>
-          <textarea
-            id='Message'
-            name='Message'
-            placeholder='Message'
-            required={true}
-          />
+          <textarea name='Message' placeholder='Message' required={true} />
         </div>
         <Button>Submit</Button>
       </FormWrap>

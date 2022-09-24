@@ -9,6 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/css": "^11.10.0",
+    "@emotion/react": "^11.10.4",
+    "@emotion/server": "^11.10.0",
+    "@emotion/styled": "^11.10.4",
+    "@sendgrid/mail": "^7.7.0",
+    "create-emotion-server": "^11.0.0",
     "gsap": "npm:@gsap/shockingly@^3.11.1",
     "next": "12.2.5",
     "react": "18.2.0",

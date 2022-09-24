@@ -7,4 +7,5 @@ export const HeadingText = styled(PageHeading)`
   font-family: Headline, sans-serif;
   text-align: ${props => props.textAlign && props.textAlign};
   line-height: ${props => props.lineHeight && props.lineHeight};
+  text-shadow: ${props => props.shadow && '5px 5px 5px rgba(0,0,0,0.3)'};
 `;

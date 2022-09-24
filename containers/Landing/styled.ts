@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled'
 
 export const Section = styled.section`
   height: 100vh;
@@ -41,58 +41,47 @@ export const HeadingContainer = styled.div`
     width: auto;
     margin-right: 3vh;
     content: '';
-    background: url(images/ufo.png) no-repeat 0 0;
-    background-size: 10vh auto;
+    background: url(images/star-1.png) no-repeat 0 0;
+    background-size: 5vh auto;
     aspect-ratio: 812/345;
   }
 
-  .landing__img-cont:nth-of-type(1) {
-    height: 4vh;
-    width: auto;
-    aspect-ratio: 812/345;
+  .landing__header > span:nth-of-type(1)::after {
+    display: inline-block;
     position: absolute;
-    grid-column: 8 / span 1;
-    grid-row: 4 / span 1;
+    height: 6vh;
+    width: auto;
+    /* margin-right: -3vh; */
+    content: '';
+    background: url(images/astronaut.png) no-repeat 0 0;
+    background-size: 6vh auto;
+    aspect-ratio: 1;
+  }
+  .landing__header > span:nth-of-type(2)::before {
+    display: block;
+    position: absolute;
+    height: 8vh;
+    width: auto;
+    margin-left: 4rem;
+    z-index: -1;
+    content: '';
+    background: url(images/globe.png) no-repeat 0 0;
+    background-size: 8vh auto;
+
+    aspect-ratio: 1;
   }
 
-  .landing__img-cont:nth-of-type(2) {
-    width: 5vw;
-    aspect-ratio: 337/270;
-    position: relative;
-    left: 6.5vw;
-    top: 5vh;
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 1;
-    @media only screen and (max-width: 600px) {
-      left: 1vw;
-      top: 3vh;
-      width: 7vw;
-    }
-  }
-  .landing__img-cont:nth-of-type(3) {
-    width: 5vw;
-    aspect-ratio: 1/1;
-    position: relative;
-    grid-column: 1 / span 1;
-    grid-row: 3 / span 1;
-    bottom: -5vh;
-    @media only screen and (max-width: 600px) {
-      left: 5vw;
-      bottom: -3vh;
-      width: 10vw;
-    }
-  }
-  .landing__img-cont:nth-of-type(4) {
-    width: 5vw;
-    aspect-ratio: 1/1;
-    position: relative;
-    grid-column: 3 / span 1;
-    grid-row: 1 / span 1;
-    right: -10vw;
-    @media only screen and (max-width: 600px) {
-      right: -20vw;
-      top: 0;
-      width: 12vw;
-    }
+  .landing__header > span:nth-of-type(3)::after {
+    display: inline-block;
+    position: absolute;
+    height: 15vh;
+    width: auto;
+    margin-left: -3vh;
+    rotate: 25deg;
+    content: '';
+    background: url(images/ufo.png) no-repeat 0 0;
+    background-size: 15vh auto;
+    aspect-ratio: 1;
+    text-shadow: 10px 10px 10px rgba(0,0,0,0.3);
   }
 `;

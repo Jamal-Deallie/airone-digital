@@ -5,7 +5,7 @@ type Props = { reverse?: boolean };
 export const InnerContainer = styled.div<Props>`
   height: 100%;
   width: 100%;
-  padding-top: var(--space-2xxl);
+  padding-top: var(--space-2xl);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
@@ -14,6 +14,8 @@ export const InnerContainer = styled.div<Props>`
   margin-inline: auto;
   @media only screen and (max-width: 800px) {
     grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  padding-top: var(--space-2xxl);
   }
   .service__flex-cont {
     width: 100%;

@@ -6,9 +6,10 @@ type Props = {
   color?: string;
   fontSize?: string;
   textAlign?: string;
-  headingLevel?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p';
+  headingLevel?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   lineHeight?: number;
   className?: string;
+  shadow?: boolean;
   cn?: string;
 };
 
@@ -20,10 +21,12 @@ export const Header = ({
   textAlign,
   lineHeight,
   className,
+  shadow,
 }: Props) => {
   return (
     <HeadingText
-      headingLevel={headingLevel ? headingLevel : 'p'}
+      shadow={shadow}
+      headingLevel={headingLevel ? headingLevel : 'h1'}
       color={color}
       fontSize={fontSize}
       textAlign={textAlign}

@@ -68,6 +68,9 @@ html {
   vertical-align: baseline;
 } 
 
+h2{
+ font-size: clamp(2.33rem, calc(1.39rem + 4.70vw), 8rem)
+}
 
 .container{
   position: relative;

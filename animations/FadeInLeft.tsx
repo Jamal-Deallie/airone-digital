@@ -8,10 +8,10 @@ type PropsFadeInUp = {
   duration?: number;
   delay?: number;
   ease?: string;
-  y?: number;
+  x?: number;
 };
 
-const FadeInUp = ({ children, duration, delay, y, ease }: PropsFadeInUp) => {
+const FadeInLeft = ({ children, duration, delay, x, ease }: PropsFadeInUp) => {
   const el = useRef<HTMLDivElement>(null);
 
   useIsomorphicLayoutEffect(() => {
@@ -19,9 +19,9 @@ const FadeInUp = ({ children, duration, delay, y, ease }: PropsFadeInUp) => {
 
     let animation = gsap.fromTo(
       el.current,
-      { opacity: 0, yPercent: y || 40 },
+      { opacity: 0, xPercent: x || 40 },
       {
-        yPercent: 0,
+        xPercent: 0,
         opacity: 1,
         delay: delay || 0,
         duration: duration || 0.5,
@@ -39,4 +39,4 @@ const FadeInUp = ({ children, duration, delay, y, ease }: PropsFadeInUp) => {
   return <div ref={el}>{children}</div>;
 };
 
-export default FadeInUp;
+export default FadeInLeft;

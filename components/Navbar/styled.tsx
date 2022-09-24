@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { PageText } from '../../helpers/PageText';
 
 export const StyledNav = styled.nav`
   height: 10rem;

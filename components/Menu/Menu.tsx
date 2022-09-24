@@ -81,7 +81,7 @@ const Menu = () => {
               {data.map(d => {
                 const { id, label, href, fontSize, color, cn } = d;
                 return (
-                  <li key={id} className={cn}>
+                  <li key={id} className={cn} onClick={openShopMenu}>
                     <Link href={href}>
                       <a>
                         <Header

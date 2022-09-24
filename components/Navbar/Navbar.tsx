@@ -1,5 +1,5 @@
 import Menu from '../../components/Menu/Menu';
-import { StyledNav, Logo, InnerContainer } from './styles';
+import { StyledNav, Logo, InnerContainer } from './styled';
 import Link from 'next/link';
 type Props = {
   color?: string;
