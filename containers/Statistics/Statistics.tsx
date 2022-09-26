@@ -3,19 +3,21 @@ import {
   GridContainer,
   DescContainer,
   SubheaderContainer,
+  StatFooterContainer,
 } from './styled';
 import { Header } from '../../components/Header/Header';
 import BodyText from '../../components/BodyText/BodyText';
 import data from '../../shared/stats.json';
+import ColorChange from '../../animations/ColorChange';
 
 type Props = {};
 
 const Statistics = (props: Props) => {
   return (
-    <section className='section'>
+    <section className='section bg-primary'>
       <div className='container'>
         <SubheaderContainer>
-          <Header fontSize='2.41rem' textAlign='center'>
+          <Header fontSize='2.41rem' textAlign='center' color={'secondary'}>
             We design, build and ship world-class digital products for
             forward-thinking brands
           </Header>
@@ -29,7 +31,7 @@ const Statistics = (props: Props) => {
                   fontSize={'2.41rem'}
                   headingLevel={'h2'}
                   lineHeight={1}
-                  className='service__text'>
+                  color={'secondary'}>
                   {subheader}
                 </Header>
                 <div className='stats__desc-cont'>
@@ -38,9 +40,11 @@ const Statistics = (props: Props) => {
               </GridContainer>
               <DescContainer reverse={reverse}>
                 <Header
-                  className='stats__stat service__text'
-                  fontSize={'clamp(7.28rem, calc(5.45rem + 7.30vw), 14.21rem)'}
-                  headingLevel={'h3'}>
+                  color={'secondary'}
+                  className='stats__stat'
+                  fontSize={'clamp(5.25rem, calc(3.79rem + 7.32vw), 25.00rem)'}
+                  headingLevel={'h3'}
+                  lineHeight={1}>
                   {stat}
                 </Header>
               </DescContainer>
@@ -51,27 +55,28 @@ const Statistics = (props: Props) => {
         {data.slice(2, 3).map(d => {
           const { id, stat, subheader, caption, reverse } = d;
           return (
-            <div key={id}>
+            <StatFooterContainer key={id}>
               <Header
-                color='secondary'
+                color={'secondary'}
                 textAlign='center'
-                fontSize={'clamp(2.98rem, calc(-3.54rem + 26.08vw), 27.76rem)'}
+                fontSize={'clamp(1.14rem, calc(-9.97rem + 44.45vw), 36.37rem)'}
                 lineHeight={1}>
                 {stat}
               </Header>
               <div className='stats__desc-cont'>
                 <Header
+                  color={'secondary'}
                   fontSize={'2.41rem'}
                   headingLevel={'h2'}
                   lineHeight={1}
                   className='service__text'>
                   {subheader}
                 </Header>
-                <div className='stats__desc-cont'>
+                <div>
                   <BodyText>{caption}</BodyText>
                 </div>
               </div>
-            </div>
+            </StatFooterContainer>
           );
         })}
       </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Header } from '../../components/Header/Header';
-import { ClientContainer } from './styled';
+import { ClientContainer, ImageContainer } from './styled';
 import Image from 'next/image';
 import data from '../../shared/clients.json';
 type Props = {};
@@ -30,17 +30,17 @@ const Clients = (props: Props) => {
             {data.map(d => {
               const { client, id, icon } = d;
               return icon ? (
-                <div key={id}>
+                <ImageContainer key={id}>
                   <Image
                     src={`/icons/${client}.svg`}
                     alt={client}
-                    width={25}
-                    height={25}
+      
+                    layout="fill"
                   />
-                </div>
+                </ImageContainer>
               ) : (
                 <div key={id}>
-                  <Header fontSize='2.41rem'>{client}</Header>
+                  <Header fontSize='clamp(5.25rem, calc(4.96rem + 1.46vw), 6.00rem)'>{client}</Header>
                 </div>
               );
             })}

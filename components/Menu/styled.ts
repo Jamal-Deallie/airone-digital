@@ -16,9 +16,10 @@ export const MenuBtn = styled.div`
   border: none;
 
   .menu__label {
-    margin-top: 2rem;
+    margin-top: 1.75rem;
     font-family: Headline, sans-serif;
-    font-size: 2.441rem;
+    font-size: 1.9rem;
+    line-height: 1;
     color: #a682fa;
     display: flex;
     flex-direction: column;

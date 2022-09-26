@@ -13,8 +13,7 @@ const Landing = () => {
       <InnerContainer>
         <HeadingContainer className='container'>
           <Header
-            className='landing__header'
-            fontSize={'clamp(3.39rem, calc(0.55rem + 11.39vw), 14.21rem)'}
+            className='landing--header'
             textAlign={'center'}
             headingLevel={'h1'}>
             <span>CREATIVE</span> IDEAS OUT OF <span>THIS </span>

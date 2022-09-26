@@ -2,7 +2,7 @@ import { useRef, ReactNode } from 'react';
 import { useIsomorphicLayoutEffect } from '../hooks/useIsomorphicLayout';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-
+import { ScrollSmoother } from 'gsap/dist//ScrollSmoother';
 type Props = {
   children: ReactNode;
   ftColor?: string;
@@ -22,7 +22,7 @@ const ColorChange = ({
   const tl = useRef(null);
 
   useIsomorphicLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
     tl.current = gsap.timeline();
 
     const contentAnimation = tl.current.to(ref.current, {
@@ -44,11 +44,10 @@ const ColorChange = ({
 
     let st = ScrollTrigger.create({
       trigger: ref.current,
-      start: 'top-=30 center',
+      start: 'top center',
       end: 'top+=10 center',
       markers: true,
       animation: contentAnimation,
-      invalidateOnRefresh: true,
     });
 
     return () => {

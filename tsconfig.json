@@ -29,6 +29,6 @@
     "**/*.tsx",
     "pages/_app.js",
     "next.config.js"
-  ],
+, "contexts/SmoothScrollProvider.js"  ],
   "exclude": ["node_modules"]
 }

@@ -8,7 +8,6 @@ export const FormWrap = styled.div`
 
   .form__input {
     width: 100%;
-
   }
   .form__input > * {
     height: 4.5rem;
@@ -18,14 +17,16 @@ export const FormWrap = styled.div`
     font-size: 1.6rem;
     ${props => props.theme.fontFamily.body};
     color: ${props => props.theme.colors.secondary};
+    padding-left: var(--space-xs);
 
     &::placeholder {
-      padding-left: var(--space-xs);
       color: ${props => props.theme.colors.secondary};
       ${props => props.theme.fontFamily.body};
+      font-weight: none;
     }
     &:focus {
       outline: none;
+      font-weight: 600;
     }
   }
 

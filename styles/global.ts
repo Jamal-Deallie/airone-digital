@@ -49,7 +49,6 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 #root{
-    margin:0 auto;
     font-size: 62.5%;
 }
 
@@ -64,7 +63,7 @@ html {
   margin: 0; 
   padding: 0; 
   border: 0; 
-  font-size: 62.5%;
+
   vertical-align: baseline;
 } 
 
@@ -73,15 +72,15 @@ h2{
 }
 
 .container{
-  position: relative;
+  /* position: relative;
   max-width: 120rem;
   margin-inline: auto;
-  padding-inline: var(--space-xs);
-  padding-top: var(--space-m);
+  padding-inline: var(--space-xs); */
+
 }
 
 .section{
-padding: var(--space-3xl) 0;
+padding: var( --space-2xl-3xl) 0;
 width: 100%; 
 height: 100%;
 }
@@ -195,5 +194,8 @@ h3{
 p{
   line-height: 1.5;
 }
+
+
+
 
 `;

@@ -10,7 +10,7 @@ export const AwardContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   gap: 10rem;
-  padding-top: var(--space-2xxl);
+  padding-top: var( --space-2xl-3xl);
 
   .awards__img-cont {
     height: 10rem;

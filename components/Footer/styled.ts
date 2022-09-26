@@ -4,6 +4,9 @@ export const FooterSection = styled.footer`
   width: 100%;
   height: 100%;
   border-top: 1px solid ${props => props.theme.colors.secondary};
+
+  z-index: 1;
+  bottom: 0;
 `;
 
 export const FooterGrid = styled.div`

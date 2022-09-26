@@ -1,13 +1,13 @@
 [
   {
     "id": 1,
-    "client": "HBO",
-    "icon": false
+    "client": "hulu",
+    "icon": true
   },
   {
     "id": 2,
-    "client": "NIKE",
-    "icon": false
+    "client": "nike",
+    "icon": true
   },
   {
     "id": 3,
@@ -16,8 +16,8 @@
   },
   {
     "id": 4,
-    "client": "AMAZON",
-    "icon": false
+    "client": "ufc",
+    "icon": true
   },
   {
     "id": 5,
@@ -26,8 +26,8 @@
   },
   {
     "id": 6,
-    "client": "PUMA",
-    "icon": false
+    "client": "nette",
+    "icon": true
   },
   {
     "id": 7,
@@ -36,8 +36,8 @@
   },
   {
     "id": 8,
-    "client": "ASM",
-    "icon": false
+    "client": "minecraft",
+    "icon": true
   },
   {
     "id": 9,
@@ -46,49 +46,52 @@
   },
   {
     "id": 10,
-    "client": "NBC",
-    "icon": false
+    "client": "kfc",
+    "icon": true
   },
   {
     "id": 11,
-    "client": "tesla",
+    "client": "mercedes",
     "icon": false
   },
   {
     "id": 12,
-    "client": "ADOBE",
-    "icon": false
+    "client": "ikea",
+    "icon": true
   },
   {
     "id": 13,
-    "client": "3M",
+    "client": "Fox",
     "icon": false
   },
   {
     "id": 14,
-    "client": "WWE",
-    "icon": false
+    "client": "dc",
+    "icon": true
   },
   {
     "id": 15,
-    "client": "The LA Times",
+    "client": "WWE",
     "icon": false
   },
+
   {
     "id": 16,
-    "client": "ETSY",
-    "icon": false
+    "client": "discover",
+    "icon": true
   },
   {
     "id": 17,
-    "client": "DEF JAM",
+    "client": "nba",
     "icon": false
   },
+
   {
     "id": 17,
-    "client": "Air Canada",
-    "icon": false
+    "client": "newbalance",
+    "icon": true
   },
+
   {
     "id": 18,
     "client": "Alfa Romeo",
@@ -96,58 +99,54 @@
   },
   {
     "id": 19,
-    "client": "Verizon",
-    "icon": false
+    "client": "3m",
+    "icon": true
   },
   {
     "id": 20,
     "client": "NBC",
     "icon": false
   },
-  {
-    "id": 21,
-    "client": "TESLA",
-    "icon": false
-  },
+
   {
     "id": 22,
-    "client": "ADOBE",
-    "icon": false
+    "client": "bookbub",
+    "icon": true
   },
   {
     "id": 23,
-    "client": "3M",
+    "client": "ESPN",
     "icon": false
   },
   {
     "id": 24,
-    "client": "WWE",
-    "icon": false
+    "client": "dotnet",
+    "icon": true
   },
   {
     "id": 25,
-    "client": "The LA Times",
+    "client": "LA Times",
     "icon": false
   },
   {
     "id": 26,
-    "client": "ETSY",
-    "icon": false
+    "client": "intel",
+    "icon": true
   },
   {
     "id": 27,
-    "client": "DEF JAM",
+    "client": "Patreon",
     "icon": false
   },
   {
     "id": 28,
-    "client": "Air Canada",
-    "icon": false
+    "client": "tesla",
+    "icon": true
   },
   {
     "id": 29,
-    "client": "Alfa Romeo",
-    "icon": false
+    "client": "cnn",
+    "icon": true
   },
   {
     "id": 30,
@@ -155,24 +154,21 @@
     "icon": false
   },
   {
-    "id": 31,
-    "client": "HBO",
-    "icon": false
+    "id": 33,
+    "client": "pegasusairlines",
+    "icon": true
   },
+
   {
     "id": 32,
     "client": "NIKE",
     "icon": false
   },
-  {
-    "id": 33,
-    "client": "GOOGLE",
-    "icon": false
-  },
+
   {
     "id": 34,
-    "client": "AMAZON",
-    "icon": false
+    "client": "box",
+    "icon": true
   },
   {
     "id": 35,
@@ -181,7 +177,33 @@
   },
   {
     "id": 36,
-    "client": "PUMA",
+    "client": "dior",
+    "icon": true
+  },
+  {
+    "id": 37,
+    "client": "Art.com",
     "icon": false
+  },
+  {
+    "id": 33,
+    "client": "jbl",
+    "icon": true
+  },
+  {
+    "id": 21,
+    "client": "Sony",
+    "icon": false
+  },
+  {
+    "id": 38,
+    "client": "caterpillar",
+    "icon": true
+  },
+  { "id": 39, "client": "Schwab", "icon": false },
+  {
+    "id": 31,
+    "client": "hbo",
+    "icon": true
   }
 ]

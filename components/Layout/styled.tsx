@@ -7,7 +7,8 @@ export const Wrap = styled.div`
   min-height: 100vh;
 `;
 
-export const MainContainer = styled.main`
+export const MainContainer = styled.div`
   flex-grow: 1;
   min-height: calc(100vh - 40rem);
+  width: 100%;
 `;

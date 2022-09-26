@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from '@emotion/styled';
 
 export const Section = styled.section`
   height: 100vh;
@@ -25,16 +25,18 @@ export const HeadingContainer = styled.div`
   width: 100%;
   height: auto;
   position: relative;
-  .landing__header {
+  .landing--header {
     height: max-content;
     width: 100%;
+    font-size: clamp(3.39rem, calc(0.55rem + 11.39vw), 14.21rem);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   }
 
-  .landing__header > span {
+  .landing--header > span {
     font-size: clamp(3.39rem, calc(0.55rem + 11.39vw), 14.21rem);
   }
 
-  .landing__header > span:nth-of-type(1)::before {
+  .landing--header > span:nth-of-type(1)::before {
     display: inline-block;
     position: absolute;
     height: 5vh;
@@ -46,7 +48,7 @@ export const HeadingContainer = styled.div`
     aspect-ratio: 812/345;
   }
 
-  .landing__header > span:nth-of-type(1)::after {
+  .landing--header > span:nth-of-type(1)::after {
     display: inline-block;
     position: absolute;
     height: 6vh;
@@ -57,7 +59,7 @@ export const HeadingContainer = styled.div`
     background-size: 6vh auto;
     aspect-ratio: 1;
   }
-  .landing__header > span:nth-of-type(2)::before {
+  .landing--header > span:nth-of-type(2)::before {
     display: block;
     position: absolute;
     height: 8vh;
@@ -71,7 +73,7 @@ export const HeadingContainer = styled.div`
     aspect-ratio: 1;
   }
 
-  .landing__header > span:nth-of-type(3)::after {
+  .landing--header > span:nth-of-type(3)::after {
     display: inline-block;
     position: absolute;
     height: 15vh;
@@ -82,6 +84,6 @@ export const HeadingContainer = styled.div`
     background: url(images/ufo.png) no-repeat 0 0;
     background-size: 15vh auto;
     aspect-ratio: 1;
-    text-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
   }
 `;
