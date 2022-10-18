@@ -13,7 +13,7 @@ export const InnerContainer = styled.div`
   }
 
   .reel--text {
-    color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.secondary};
     ${props => props.theme.fontFamily.heading}
   }
   .reel--text:nth-of-type(1) {

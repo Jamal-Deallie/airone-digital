@@ -1,88 +1,34 @@
 import React from 'react';
-import { Header } from '../../components/Header/Header';
-import { InnerContainer, HeaderContainer } from './styled';
-import Link from 'next/link';
-import BodyText from '../../components/BodyText/BodyText';
+import Form from '../../components/Form/Form';
+import styles from '../../styles/containers/contact.module.css';
+import { GridContainer } from './styled';
+
 type Props = {};
 
 const Contact = (props: Props) => {
   return (
-    <section className='section bg-primary'>
-      <div className='container'>
-        <HeaderContainer>
-          <Header
-            color='secondary'
-            fontSize={'clamp(2.33rem, calc(0.85rem + 7.43vw), 9.77rem)'}
-            textAlign={'center'}
-            headingLevel={'h2'}
-            lineHeight={0.9}>
-            Heard
-          </Header>
-          <Header
-            color='secondary'
-            fontSize={'clamp(2.33rem, calc(0.85rem + 7.43vw), 9.77rem)'}
-            textAlign={'center'}
-            headingLevel={'h2'}
-            lineHeight={0.9}>
-            Enough
-          </Header>
-        </HeaderContainer>
-
-        <InnerContainer>
-          <Link href='/contact'>
-            <a>
-              <Header
-                color='secondary'
-                fontSize={'clamp(3.39rem, calc(0.55rem + 11.39vw), 14.21rem)'}
-                textAlign={'center'}
-                headingLevel={'h1'}
-                lineHeight={0.9}>
-                Contact Us
-              </Header>
-            </a>
-          </Link>
-          <div className='link-cont'>
-            <Link href='/'>
-              <a>
-                <BodyText fontWeight={800} fontSize={'1.6rem'}>
-                  DRIBBLE
-                </BodyText>
-              </a>
-            </Link>
-            <BodyText fontWeight={800} fontSize={'1.6rem'}>
-              •
-            </BodyText>
-            <Link href='/'>
-              <a>
-                <BodyText fontWeight={800} fontSize={'1.6rem'}>
-                  INSTAGRAM
-                </BodyText>
-              </a>
-            </Link>
-            <BodyText fontWeight={800} fontSize={'1.6rem'}>
-              •
-            </BodyText>
-            <Link href='/'>
-              <a>
-                <BodyText fontWeight={800} fontSize={'1.6rem'}>
-                  BEHANCE
-                </BodyText>
-              </a>
-            </Link>
-            <BodyText fontWeight={800} fontSize={'1.6rem'}>
-              •
-            </BodyText>
-            <Link href='/'>
-              <a>
-                <BodyText fontWeight={800} fontSize={'1.6rem'}>
-                  TIK TOK
-                </BodyText>
-              </a>
-            </Link>
-          </div>
-        </InnerContainer>
+    <div className={styles.container}>
+      <div className={styles['heading']}>
+        <div className={styles['header-line']}>
+          <h1>{"Let's"}</h1>
+        </div>
+        <div className={styles['header-line']}>
+          <h1>Talk</h1>
+        </div>
       </div>
-    </section>
+      <div className={styles['flex-cont']}>
+        <div className={styles['inner-cont']}>
+          <p>
+            We take on select projects, working with companies who are inventing
+            or reinventing. If there’s a project you’d like to talk to us about,
+            please get in touch.
+          </p>
+        </div>
+        <div className={styles['inner-cont']}>
+          <Form />
+        </div>
+      </div>
+    </div>
   );
 };
 

@@ -1,31 +1,39 @@
 import styled from 'styled-components';
 
 export const InnerContainer = styled.div`
+  position: relative;
   height: 100%;
-  width: 100%;
-
-  .vid-cont-height {
-    height: 90vh;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .vid-cont-height video {
-    position: absolute;
-    bottom: 0;
-    height: calc(100vh * 1.25);
+  overflow: hidden;
+  .showreel-vid {
     object-fit: cover;
-    display: block;
     width: 100%;
+    height: 60vh;
+    /* z-index: -1; */
   }
 
-  .reel__vid-cont {
-    margin-left: 2rem;
-    margin-inline: auto;
-    order: 2;
-    video {
-      max-height: 45rem;
-      margin-inline: auto;
-    }
+  .ParallaxMainContent {
+    background-color: black;
+    color: #b8c1ec;
+
+    height: 100%;
+    min-height: 30rem;
+  }
+  .ParallaxMainContent h3 {
+    color: gold;
+    text-align: center;
+  }
+
+  /* Video Parallax Section*/
+  .ParallaxVideo {
+    height: 300px;
+  }
+
+  .ParallaxVideo video {
+    object-fit: cover;
+    width: 100vw;
+    height: 60vh;
+    position: sticky;
+    top: 0;
+    left: 0;
   }
 `;

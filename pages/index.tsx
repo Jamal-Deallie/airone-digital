@@ -1,19 +1,23 @@
+import type { NextPage } from 'next';
 import Landing from '../containers/Landing/Landing';
 import Showreel from '../containers/Showreel/Showreel';
-import Services from '../containers/Services/Services';
-import Contact from '../containers/Contact/Contact';
+import Ads from '../containers/Ads/Ads';
+import Contact from '../containers/CTA/CTA';
 import About from '../containers/About/About';
 import ServiceTitle from '../containers/ServiceTitle/ServiceTitle';
-const HomePage = () => {
+import Founder from '../containers/Founder/Founder';
+
+const HomePage: NextPage = () => {
   return (
-    <div>
+    <>
       <Landing />
       <About />
+      <Founder />
       <ServiceTitle />
-      <Services />
+      <Ads />
       <Showreel />
       <Contact />
-    </div>
+    </>
   );
 };
 

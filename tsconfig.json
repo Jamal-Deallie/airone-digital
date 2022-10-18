@@ -18,7 +18,7 @@
     "paths": {
       "@/components/*": ["/components/*"],
       "@/containers/*": ["/containers/*"],
-      "@/styled/*": ["/styled/*"]
+      "@/styles/*": ["/styles/*"]
     }
   },
   "include": [
@@ -28,7 +28,10 @@
     "**/*.ts",
     "**/*.tsx",
     "pages/_app.js",
-    "next.config.js"
-, "contexts/SmoothScrollProvider.js"  ],
+    "next.config.js",
+    "hooks/useLocoScroll.js",
+    "contexts/SmoothScrollProvider.tsx",
+    "components/Layout/Layout.tsx"
+  ],
   "exclude": ["node_modules"]
 }

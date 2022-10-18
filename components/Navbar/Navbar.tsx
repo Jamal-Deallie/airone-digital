@@ -1,21 +1,21 @@
 import Menu from '../../components/Menu/Menu';
-import { StyledNav, Logo, InnerContainer } from './styled';
 import Link from 'next/link';
+import styles from '../../styles/navbar.module.css';
 type Props = {
   color?: string;
 };
 
 export const Navbar = () => {
   return (
-    <StyledNav>
-      <InnerContainer>
+    <nav className={styles.nav}>
+      <div>
         <Menu />
-        <Link href='/'>
-          <a>
-            <Logo>Airone</Logo>
-          </a>
-        </Link>
-      </InnerContainer>
-    </StyledNav>
+        <div className={styles.wrap}>
+          <Link href='/'>
+            <a className={styles.logo}>Airone</a>
+          </Link>
+        </div>
+      </div>
+    </nav>
   );
 };

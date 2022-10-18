@@ -1,33 +1,32 @@
-import { InnerContainer } from './styled';
-import Image from 'next/image';
-import ColorChange from '../../animations/ColorChange';
-import ScaleUp from '../../animations/ScaleUp';
+import styles from '../../styles/containers/serviceTitle.module.css';
+import StarOne from '../../svgs/StarOne';
+import StarTwo from '../../svgs/StarOne';
+import StarDiamond from '../../svgs/StarDiamond';
+import StarCircle from '../../svgs/StarCircle';
+import ScaleSvg from '../../animations/Scale';
+
 const ServiceTitle = () => {
   return (
-    <ColorChange bgColor='#AC7EF3' ftColor={'#1A1B1D'} ftTarget={'.reel--text'}>
-      <InnerContainer>
-        <div className='service__img-cont'>
-          <Image alt='' src='/images/star-7.svg' layout='fill' />
-        </div>
-        <div className='reel_heading-line'>
-          <h1 className='reel--text'>We</h1>
-          <h1 className='reel--text'>Think</h1>
-          {/* <ScaleUp txtTarget={'.reel--lrg'}> */}
-          <h1 className='reel--lrg reel--text'>BIG</h1>
-          {/* </ScaleUp> */}
-        </div>
-        <div className='service--wrap'>
-          <div className='service__star-cont'>
-            <Image
-              alt=''
-              src='/images/star-6.svg'
-              layout='fill'
-              className='service--star'
-            />
+    <div className={styles.container}>
+      <div className={styles.star} id='svg'>
+        <StarOne newHeight={22} />
+      </div>
+      <div className={styles.star} id='svg'>
+        <StarCircle newHeight={15} />
+      </div>
+
+      <div className={styles['text-cont']}>
+        <h1 className={styles.heading}>We</h1>
+        <h1 className={styles.heading}>Think</h1>
+        <h1 className={styles['big-text']}>BIG</h1>
+        {/* <div className={styles['star-big']}>
+            <StarTwo newHeight={25} />
           </div>
-        </div>
-      </InnerContainer>
-    </ColorChange>
+          <div className={styles['star-big']}>
+            <StarDiamond newHeight={22} />
+          </div> */}
+      </div>
+    </div>
   );
 };
 

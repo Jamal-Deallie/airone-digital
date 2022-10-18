@@ -11,6 +11,33 @@ const nextConfig = {
     SENDGRID_API_KEY:
       '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',
   },
+
+  images: {
+    domains: ['localhost'],
+  },
+  webpack(config) {
+    config.module.rules.push({
+      loader: '@svgr/webpack',
+      options: {
+        prettier: false,
+        svgo: true,
+        svgoConfig: {
+          plugins: [
+            {
+              name: 'preset-default',
+              params: {
+                overrides: { removeViewBox: false },
+              },
+            },
+          ],
+        },
+        titleProp: true,
+      },
+      test: /\.svg$/,
+    });
+
+    return config;
+  },
 };
 
 module.exports = nextConfig;

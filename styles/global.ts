@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
 :root {
+  
   --space-3xs: clamp(0.31rem, calc(0.29rem + 0.12vw), 0.38rem);
   --space-2xs: clamp(0.69rem, calc(0.66rem + 0.12vw), 0.75rem);
   --space-xs: clamp(1.00rem, calc(0.95rem + 0.24vw), 1.13rem);
@@ -32,7 +33,15 @@ export const GlobalStyles = createGlobalStyle`
   --space-xxxs: clamp(1.00rem, calc(-0.07rem + 5.37vw), 3.75rem);
   --space-xxl: clamp(4.13rem, calc(1.34rem + 13.90vw), 11.25rem);
   --space-xxs: clamp(1.56rem, calc(0.51rem + 5.24vw), 4.25rem);
+
+  --body-font: neue-haas-unica, sans-serif;
+  --heading-font: headline, sans-serif;
+  --primary-variant: #A682FA;
+  --secondary-variant:#1A1B1D;
+  --tertiary-variant: #FBEBDC;
 }
+
+
 
 .flow > * + * {
   margin-top: var(--flow-space, 1em);
@@ -44,26 +53,27 @@ export const GlobalStyles = createGlobalStyle`
 * {
     margin: 0;
     padding: 0;
-    outline:0;
     box-sizing:border-box;
-}
-
-#root{
-    font-size: 62.5%;
 }
 
 body{
   background-color:#FBEBDC;
+  font-size: clamp(1.17rem, calc(1.07rem + 0.41vw), 1.56rem);
+  overscroll-behavior: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
+ 
 }
    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video { 
   margin: 0; 
   padding: 0; 
   border: 0; 
-
   vertical-align: baseline;
 } 
 
@@ -86,7 +96,7 @@ height: 100%;
 }
 
 .bg-primary{
-  background-color: #AC7EF3;
+  background-color: #A682FA;
 }
 
 input,
@@ -124,6 +134,7 @@ html, body {
   5. Improve text rendering */
 body {
   -webkit-font-smoothing: antialiased;
+  font-family: var(--body-font);
 }
 /*
   6. Improve media defaults
@@ -143,7 +154,12 @@ input, button, textarea, select {
 */
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
+
 }
+ h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+}
+
 /*
   9. Create a root stacking context
 */
@@ -151,19 +167,9 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
-@font-face {
-  font-family: Headline;
-  src: url("/font/Headline.ttf");
-  format: ("opentype");
-  font-display: swap;
-}
-
-
-@font-face {
-  font-family: Open-Sans;
-  src: url("/font/OpenSans-Regular.ttf");
-  format: ("opentype");
-  font-display: swap;
+#baseComponent {
+  visibility: hidden;
+  overflow-x: hidden;
 }
 
 
@@ -193,9 +199,56 @@ h3{
 
 p{
   line-height: 1.5;
+ font-size: 1.6rem;
+  font-family: var(--body-font);
 }
 
 
+/* @font-face {
+  font-family: 'Headline';
+  src: url("/font/Headline.woff") format('font/woff');
+  font-display: optional;
+} */
 
+@font-face {
+  font-family: 'headline';
+    font-style: normal;
+    font-weight: normal;
+    src: local('/font/Headline.woff'), url('/font/Headline.woff') format('woff');
+
+    }
+    
+
+
+
+.menu_links{
+  font-family: var(--heading-font);
+  font-size: clamp(3.39rem, calc(0.55rem + 11.39vw), 14.21rem);
+  line-height: 1;
+  color: var(--secondary-variant);
+}
+
+.links{
+  font-size: clamp(1.17rem, calc(1.07rem + 0.41vw), 1.56rem);
+  color: var(--secondary-variant);
+  font-family: var(--body-font);
+  text-transform: uppercase;
+}
+
+.lrg-primary{
+ font-size: clamp(2.98rem, calc(-3.54rem + 26.08vw), 27.76rem);
+ text-transform: uppercase;
+ font-family: var(--heading-font);
+ color: var(--secondary-variant);
+ text-align: center;
+}
+
+
+.footer-body{
+  font-size: clamp(1.17rem, calc(1.07rem + 0.41vw), 1.56rem);
+  color: var(--secondary-variant);
+  font-family: var(--body-font);
+  text-transform: uppercase;
+}
 
 `;

@@ -10,10 +10,12 @@ export const MenuBtn = styled.div`
   width: 12rem;
   border-radius: 5rem;
   background-color: #1a1b1d;
+  border: 1.5px solid;
+  border-color: var(--primary-variant);
   overflow: hidden;
   cursor: pointer;
   z-index: 10;
-  border: none;
+
 
   .menu__label {
     margin-top: 1.75rem;

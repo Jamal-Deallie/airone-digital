@@ -1,7 +1,8 @@
-import ContactForm from '../containers/ContactForm/ContactForm';
+import type { NextPage } from 'next';
+import Contact from '../containers/Contact/Contact';
 
-const ContactPage = () => {
-  return <ContactForm />;
+const ContactPage: NextPage = () => {
+  return <Contact />;
 };
 
 export default ContactPage;

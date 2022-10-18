@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "image": "/images/emp-6.png",
+    "image": "/images/team-airone-1.png",
     "name": "Name",
     "title": "Title",
     "desc": "Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in",
@@ -10,7 +10,7 @@
 
   {
     "id": 2,
-    "image": "/images/emp-1.png",
+    "image": "/images/team-airone-2.png",
     "name": "Name",
     "title": "Title",
     "desc": "Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in",
@@ -19,7 +19,7 @@
 
   {
     "id": 3,
-    "image": "/images/emp-2.png",
+    "image": "/images/team-airone-3.png",
     "name": "Name",
     "title": "Title",
     "desc": "Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in",
@@ -28,7 +28,7 @@
 
   {
     "id": 4,
-    "image": "/images/emp-4.png",
+    "image": "/images/team-airone-4.png",
     "name": "Name",
     "title": "Title",
     "desc": "Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in",
@@ -36,7 +36,7 @@
   },
   {
     "id": 5,
-    "image": "/images/emp-5.png",
+    "image": "/images/team-airone-5.png",
     "name": "Name",
     "title": "Title",
     "desc": "Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in",

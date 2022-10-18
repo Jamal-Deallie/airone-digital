@@ -1,7 +1,7 @@
-
+import type { NextPage } from 'next';
 import TeamMembers from '../containers/Team/Team';
 
-const TeamsPage = () => {
+const TeamsPage: NextPage = () => {
   return <TeamMembers />;
 };
 

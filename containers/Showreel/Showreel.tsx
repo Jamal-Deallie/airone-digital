@@ -3,13 +3,11 @@ import { InnerContainer } from './styled';
 
 const Showreel = () => {
   return (
-    <section className="bg-primary">
+    <section className='bg-primary'>
       <InnerContainer>
-        <div className='vid-cont-height'>
-          <video autoPlay loop muted id='video' data-speed='auto'>
-            <source src='/video/showreel.mp4' type='video/mp4' />
-          </video>
-        </div>
+        <video className='showreel-vid' autoPlay loop muted id='video'>
+          <source src='/video/showreel.mp4' type='video/mp4' />
+        </video>
       </InnerContainer>
     </section>
   );

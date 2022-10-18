@@ -1,14 +1,15 @@
-import { IconScroll, Container } from './styled';
-
-type PropsIconScroll = {
-  color?: string;
-};
-
-const SwipeIcon = ({ color }: PropsIconScroll) => {
+const SwipeIcon = () => {
   return (
-    <Container>
-      <IconScroll className='scroll-down' color={color} />
-    </Container>
+    <div>
+      <style jsx>{`
+        div {
+          width: 40px;
+          height: 70px;
+          position: relative;
+        }
+      `}</style>
+      <div className='icon-scroll' />
+    </div>
   );
 };
 

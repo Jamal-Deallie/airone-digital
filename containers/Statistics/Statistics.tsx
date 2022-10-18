@@ -1,86 +1,64 @@
-import {
-  InnerContainer,
-  GridContainer,
-  DescContainer,
-  SubheaderContainer,
-  StatFooterContainer,
-} from './styled';
-import { Header } from '../../components/Header/Header';
-import BodyText from '../../components/BodyText/BodyText';
-import data from '../../shared/stats.json';
-import ColorChange from '../../animations/ColorChange';
+import styles from '../../styles/containers/statistics.module.css';
 
-type Props = {};
+type StatisticsProps = {
+  data: any[];
+};
 
-const Statistics = (props: Props) => {
+const Statistics = ({ data }: StatisticsProps) => {
+  let mainData: Array<any> = ([] = data.slice(0, 2));
+  let secData: Array<any> = ([] = data.slice(2, 3));
+
   return (
-    <section className='section bg-primary'>
-      <div className='container'>
-        <SubheaderContainer>
-          <Header fontSize='2.41rem' textAlign='center' color={'secondary'}>
-            We design, build and ship world-class digital products for
-            forward-thinking brands
-          </Header>
-        </SubheaderContainer>
-        {data.slice(0, 2).map(d => {
-          const { id, stat, subheader, caption, reverse } = d;
-          return (
-            <InnerContainer key={id}>
-              <GridContainer className='stats__grid-cont' reverse={reverse}>
-                <Header
-                  fontSize={'2.41rem'}
-                  headingLevel={'h2'}
-                  lineHeight={1}
-                  color={'secondary'}>
-                  {subheader}
-                </Header>
-                <div className='stats__desc-cont'>
-                  <BodyText>{caption}</BodyText>
+    <div className={styles.container}>
+      <div className={styles.header}>
+        <div className={styles['header-line']}>
+          <h1>Our</h1>
+        </div>
+        <div className={styles['header-line']}>
+          <h1>Numbers</h1>
+        </div>
+      </div>
+      <div className={styles.desc}>
+        <p>
+          Sit nemo veniam ut repudiandae quos aut quas voluptas sit repellat
+          sint et unde reiciendis sed consequatur aspernatur est sint incidunt.
+          Aut iure vitae eos cupiditate doloremque qui magni quia sit minus
+          internos.
+        </p>
+      </div>
+      <div className={styles['inner-cont']}>
+        <div className={styles['statistic-items']}>
+          {mainData.map(({ id, title, desc, stat }) => {
+            return (
+              <div key={id} className={styles['flex-cont']}>
+                <div className={styles['desc-cont']}>
+                  <h3 className={styles.title}>{title}</h3>
+                  <div className='desc'>
+                    <p className={styles['stats-desc']}>{desc}</p>
+                  </div>
                 </div>
-              </GridContainer>
-              <DescContainer reverse={reverse}>
-                <Header
-                  color={'secondary'}
-                  className='stats__stat'
-                  fontSize={'clamp(5.25rem, calc(3.79rem + 7.32vw), 25.00rem)'}
-                  headingLevel={'h3'}
-                  lineHeight={1}>
-                  {stat}
-                </Header>
-              </DescContainer>
-            </InnerContainer>
-          );
-        })}
-
-        {data.slice(2, 3).map(d => {
-          const { id, stat, subheader, caption, reverse } = d;
-          return (
-            <StatFooterContainer key={id}>
-              <Header
-                color={'secondary'}
-                textAlign='center'
-                fontSize={'clamp(1.14rem, calc(-9.97rem + 44.45vw), 36.37rem)'}
-                lineHeight={1}>
-                {stat}
-              </Header>
-              <div className='stats__desc-cont'>
-                <Header
-                  color={'secondary'}
-                  fontSize={'2.41rem'}
-                  headingLevel={'h2'}
-                  lineHeight={1}
-                  className='service__text'>
-                  {subheader}
-                </Header>
-                <div>
-                  <BodyText>{caption}</BodyText>
+                <div className={styles['stats-cont']}>
+                  <h1 className={styles['stats-stat']}>{stat}</h1>
                 </div>
               </div>
-            </StatFooterContainer>
+            );
+          })}
+        </div>
+        {secData.map(({ id, title, stat, desc }) => {
+          return (
+            <div className={styles.footer} key={id}>
+              <h1 className={styles['footer-stat']}>{stat}</h1>
+              <div className={styles['footer-desc-cont']}>
+                <h3 className={styles.title}>{title}</h3>
+                <div>
+                  <p className={styles['stats-desc']}>{desc}</p>
+                </div>
+              </div>
+            </div>
           );
         })}
       </div>
-    </section>
+    </div>
   );
 };
 

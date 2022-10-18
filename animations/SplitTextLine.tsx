@@ -3,6 +3,7 @@ import { useIsomorphicLayoutEffect } from '../hooks/useIsomorphicLayout';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import SplitText from 'gsap/dist/SplitText';
+import { ScrollSmoother } from 'gsap/dist//ScrollSmoother';
 import styled from 'styled-components';
 
 type PropsSplitTextLine = {
@@ -13,6 +14,7 @@ type PropsSplitTextLine = {
   y?: number;
   cn?: string;
   stagger?: number;
+  target?: string;
 };
 
 function SplitTextLine({
@@ -28,45 +30,38 @@ function SplitTextLine({
   const tl = useRef(null);
   const text = useRef(null);
 
-  useLayoutEffect(() => {
-    let split: SplitText;
+  useIsomorphicLayoutEffect(
+    () => {
+      gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
+      let split: SplitText;
 
-    let timeout: string | number | NodeJS.Timeout | undefined; // holder for timeout id
-    let delay = 250; // delay after event is "complete" to run callback
-    function init() {
+      let timeout: string | number | NodeJS.Timeout | undefined; // holder for timeout id
+      let delay = 250; // delay after event is "complete" to run callback
+
       if (split) {
         split.revert();
       }
-      split = new SplitText(text.current, {
-        type: 'lines',
+      split = new SplitText(cn, {
+        charsClass: 'chars',
+        linesClass: 'lines',
       });
 
-      tl.current = gsap.timeline();
-
-      tl.current.fromTo(
-        split.lines,
-        {
-          y: '-50%',
-          opacity: 0,
-  
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: el.current,
+          start: 'top center',
+          // end: 'center top',
+          markers: true,
         },
-
-        {
-          y: '0%',
-          opacity: 1,
-          ease: 'power4.out',
-          overflow: 'hidden',
-          duration: 2,
-          stagger: 0.2,
-          scrollTrigger: {
-            trigger: el.current,
-            start: 'top center',
-            end: 'bottom',
-          },
-        }
+      });
+      gsap.set(split.chars, { y: '100%', opacity: 0 });
+      tl.to(
+        split.chars,
+        { duration: 0.7, y: '0%', opacity: 1, stagger: 0.04 },
+        '>-50%'
       );
-    }
-    init();
+    },
+
     // window.addEventListener('resize', function () {
     //   gsap.set('.fullScreen', { autoAlpha: 0 });
     //   // clear the timeout
@@ -74,13 +69,10 @@ function SplitTextLine({
     //   // start timing for event "completion"
     //   timeout = setTimeout(init, delay);
     // });
-  }, []);
-
-  return (
-    <Container ref={el}>
-      <h2 ref={text}>We don’t care just about design. We care about you</h2>
-    </Container>
+    [tl, cn]
   );
+
+  return <Container ref={el}>{children}</Container>;
 }
 
 export default SplitTextLine;
@@ -88,8 +80,7 @@ export default SplitTextLine;
 // autoRefreshEvents: "DOMContentLoaded,load,resize"
 
 export const Container = styled.div`
-  h2 {
-    font-size: clamp(2.33rem, calc(1.39rem + 4.7vw), 8rem);
-    line-height: 1;
+  .lines {
+    overflow: hidden;
   }
 `;

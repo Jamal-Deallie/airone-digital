@@ -1,17 +1,21 @@
 import styled from 'styled-components';
 
+export const Section = styled.section`
+  width: 100%;
+`;
 export const InnerContainer = styled.div`
   position: relative;
-  max-width: 45vw;
-  min-width: 35rem;
-  padding-inline: var(--space-2xxl);
-  .lines {
-    font-size: clamp(2.33rem, calc(1.39rem + 4.7vw), 8rem);
+
+  width: 100%;
+
+  h2 {
+    max-width: 80rem;
+    width: 100%;
     line-height: 1;
   }
   .about__text {
-    margin-top: var(--space-xl);
-    max-width: 50rem;
+    margin-top: var(--space-l-xl);
+    max-width: 60rem;
   }
 `;
 

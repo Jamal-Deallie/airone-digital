@@ -1,0 +1,35 @@
+.nav {
+  height: 10rem;
+  background-color: transparent;
+  left: 0;
+  top: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+}
+
+.wrap {
+  font-size: 3.8rem;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 11;
+}
+
+.logo {
+  font-family: var(--heading-font);
+  -webkit-text-stroke: 1.5px var(--secondary-variant);
+  -webkit-text-fill-color: transparent;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.logo:hover {
+  -webkit-text-stroke: none;
+  -webkit-text-fill-color: var(--secondary-variant);
+}
+
+/* color: #1a1b1d; */

@@ -1,53 +1,55 @@
 import React from 'react';
 import { Header } from '../../components/Header/Header';
-import { ClientContainer, ImageContainer } from './styled';
+import { ClientContainer, ImageContainer, Section } from './styled';
 import Image from 'next/image';
 import data from '../../shared/clients.json';
-type Props = {};
+type ClientProps = { data: any[] };
 
-const Clients = (props: Props) => {
+const Clients = ({ data }: ClientProps) => {
+  console.log(data);
+  let test = data[1];
+
+  console.log(test.image.data);
   return (
-    <section className='section'>
+    <Section>
       <div className='container'>
-        <div>
-          <Header
-            fontSize={'clamp(2.33rem, calc(0.85rem + 7.43vw), 9.77rem)'}
-            textAlign={'center'}
-            headingLevel={'h2'}
-            lineHeight={0.9}>
-            Trusted
-          </Header>
-          <Header
-            fontSize={'clamp(2.33rem, calc(0.85rem + 7.43vw), 9.77rem)'}
-            textAlign={'center'}
-            headingLevel={'h2'}
-            lineHeight={0.9}>
-            BY
-          </Header>
+        <div className='main-header'>
+          <h1>Our</h1>
+          <h1>Clients</h1>
         </div>
         <div>
           <ClientContainer>
-            {data.map(d => {
-              const { client, id, icon } = d;
-              return icon ? (
-                <ImageContainer key={id}>
+            {data.map(({ id, image, icon, client, slug }) => {
+              // const { url} = image?.data?.attributes;
+
+              return image.data === null ? (
+                <div key={id} className='client name__cont'>
+                  <h3>{client}</h3>
+                </div>
+              ) : (
+                <ImageContainer
+                  className='client img__cont'
+                  aspect={
+                    `${image?.data?.attributes.width}` +
+                    '/' +
+                    `${image?.data?.attributes.height}`
+                  }>
                   <Image
-                    src={`/icons/${client}.svg`}
+                    key={id}
+                    src={
+                      `${process.env.NEXT_PUBLIC_STRAPI_URL}` +
+                      image?.data?.attributes.url
+                    }
                     alt={client}
-      
-                    layout="fill"
+                    layout='fill'
                   />
                 </ImageContainer>
-              ) : (
-                <div key={id}>
-                  <Header fontSize='clamp(5.25rem, calc(4.96rem + 1.46vw), 6.00rem)'>{client}</Header>
-                </div>
               );
             })}
           </ClientContainer>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

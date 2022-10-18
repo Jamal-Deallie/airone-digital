@@ -2,7 +2,7 @@ import { DefaultTheme } from 'styled-components';
 
 const theme: DefaultTheme = {
   colors: {
-    primary: '#AC7EF3',
+    primary: '#A682FA',
     secondary: '#1A1B1D',
     tertiary: '#FBEBDC',
   },
@@ -17,8 +17,8 @@ const theme: DefaultTheme = {
     row: 'display: flex; align-items: center; justify-content: space-between;',
   },
   fontFamily: {
-    heading: 'font-family: Headline, sans-serif',
-    body: 'font-family: Open Sans, sans-serif',
+    heading: 'Headline, sans-serif',
+    body: 'neue-haas-unica, sans-serif',
   },
 } as const;
 

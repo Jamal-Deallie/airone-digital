@@ -1,0 +1,100 @@
+.outer-container {
+  padding: var(--space-3xl) var(--space-l-xl);
+  width: 100%;
+}
+
+.inner-container {
+  padding-top: var(--space-3xl);
+  max-width: 90rem;
+  margin-inline: auto;
+}
+
+.heading {
+  color: var(--primary-variant);
+  width: 100%;
+  font-size: 6.5rem;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  .heading {
+    font-size: clamp(1.44rem, calc(0.06rem + 6.91vw), 4.98rem);
+  }
+}
+
+.line:nth-of-type(1) {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: max-content;
+  margin-inline: auto;
+}
+
+.line:nth-of-type(3) {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: max-content;
+  margin-inline: auto;
+}
+
+.earth {
+  width: 7.5vw;
+  aspect-ratio: 394/392;
+  align-self: center;
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  margin-left: -2vw;
+  width: 5.75vw;
+}
+
+.star {
+  width: 4.5vw;
+  aspect-ratio: 337/270;
+  align-self: center;
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  margin-bottom: -1vh;
+  margin-left: -1vw;
+  max-width: 7.75rem;
+}
+
+.rocket {
+  align-self: flex-end;
+  rotate: 120deg;
+  width: 5.5vw;
+  max-width: 6rem;
+  aspect-ratio: 195/531;
+  position: absolute;
+  display: inline-block;
+  margin-bottom: 7.5vh;
+  right: 0;
+  z-index: -1;
+}
+.ufo {
+  position: absolute;
+  rotate: -17deg;
+  width: 10vw;
+  right: 0;
+  margin-right: -3vw;
+  aspect-ratio: 812/345;
+  width: 7.75vw;
+}
+
+.header-cont {
+  display: flex;
+}
+
+.scroll-wrap {
+  position: relative;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+}

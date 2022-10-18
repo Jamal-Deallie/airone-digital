@@ -1,10 +1,9 @@
 import { useRef, useEffect, useState, useCallback } from 'react';
 import { useIsomorphicLayoutEffect } from '../../hooks/useIsomorphicLayout';
 import { gsap } from 'gsap';
-import { MenuBtn, MenuContainer } from './styled';
 import Link from 'next/link';
-import { Header } from '../../components/Header/Header';
 import data from '../../shared/links.json';
+import styles from '../../styles/menu.module.css';
 
 type MenuProps = {
   Open: boolean;
@@ -21,11 +20,11 @@ const Menu = () => {
 
   useIsomorphicLayoutEffect(() => {
     tl.current = gsap.timeline({ pause: true });
-    let targets = gsap.utils.toArray(['.menu__layer', '.menu__overlay']);
-    let links = gsap.utils.toArray('.menu__link');
+    let targets = gsap.utils.toArray(['#layer', '#overlay']);
+    let links = gsap.utils.toArray('#link');
 
     tl.current
-      .to('.menu__main', {
+      .to('#cont', {
         duration: 0.1,
         css: { display: 'block' },
       })
@@ -67,106 +66,39 @@ const Menu = () => {
 
   return (
     <>
-      <MenuBtn role='button' id='btn' onClick={openShopMenu}>
-        <div className='menu__label' id='label'>
+      <div
+        role='button'
+        id='btn'
+        onClick={openShopMenu}
+        className={styles['menu-btn']}>
+        <div className={styles['menu-label']} id='label'>
           <span>Menu</span>
-          <span>Close</span>
+          {/* <span>Close</span> */}
         </div>
-      </MenuBtn>
+      </div>
 
-      <MenuContainer className='menu__main'>
-        <div className='menu__layer'>
-          <div className='menu__overlay'>
-            <ul>
+      <div className={styles['menu-cont']} id='cont'>
+        <div className={styles.layer} id='layer'>
+          <div className={styles.overlay} id='overlay'>
+            <ul className={styles['link-cont']}>
               {data.map(d => {
-                const { id, label, href, fontSize, color, cn } = d;
+                const { id, label, href } = d;
                 return (
-                  <li key={id} className={cn} onClick={openShopMenu}>
+                  <li
+                    key={id}
+                    className={styles['menu-link']}
+                    onClick={openShopMenu}
+                    id='link'>
                     <Link href={href}>
-                      <a>
-                        <Header
-                          fontSize={fontSize}
-                          color={color}
-                          lineHeight={1}>
-                          {label}
-                        </Header>
-                      </a>
+                      <a>{label}</a>
                     </Link>
                   </li>
                 );
               })}
             </ul>
-
-            {/* <div className='menu__secondary'>
-              <Header color='secondary' headingLevel={'h2'} fontSize='2.41rem'>
-                Sign up to our newsletter
-              </Header>
-
-              <form action='#' method='post'>
-                <input type='email' />
-                <button>Submit</button>
-              </form>
-
-              <div className='menu__flex-cont'>
-                <BodyText fontSize='clamp(1.17rem, calc(1.07rem + 0.41vw), 1.56rem)'>
-                  AirOne Digital
-                </BodyText>
-                <BodyText fontSize='clamp(1.17rem, calc(1.07rem + 0.41vw), 1.56rem)'>
-                  123 Main Street
-                </BodyText>
-                <BodyText fontSize='clamp(1.17rem, calc(1.07rem + 0.41vw), 1.56rem)'>
-                  Dallas, TX 75202
-                </BodyText>
-                <BodyText fontSize='clamp(1.17rem, calc(1.07rem + 0.41vw), 1.56rem)'>
-                  P: 123-123-4567
-                </BodyText>
-                <BodyText fontSize='clamp(1.17rem, calc(1.07rem + 0.41vw), 1.56rem)'>
-                  E: questions@airone.com
-                </BodyText>
-              </div>
-              <div className='link-cont'>
-                <Link href='/'>
-                  <a>
-                    <BodyText fontWeight={800} fontSize={'1.6rem'}>
-                      DRIBBLE
-                    </BodyText>
-                  </a>
-                </Link>
-                <BodyText fontWeight={800} fontSize={'1.6rem'}>
-                  •
-                </BodyText>
-                <Link href='/'>
-                  <a>
-                    <BodyText fontWeight={800} fontSize={'1.6rem'}>
-                      INSTAGRAM
-                    </BodyText>
-                  </a>
-                </Link>
-                <BodyText fontWeight={800} fontSize={'1.6rem'}>
-                  •
-                </BodyText>
-                <Link href='/'>
-                  <a>
-                    <BodyText fontWeight={800} fontSize={'1.6rem'}>
-                      BEHANCE
-                    </BodyText>
-                  </a>
-                </Link>
-                <BodyText fontWeight={800} fontSize={'1.6rem'}>
-                  •
-                </BodyText>
-                <Link href='/'>
-                  <a>
-                    <BodyText fontWeight={800} fontSize={'1.6rem'}>
-                      TIK TOK
-                    </BodyText>
-                  </a>
-                </Link>
-              </div>
-            </div> */}
           </div>
         </div>
-      </MenuContainer>
+      </div>
     </>
   );
 };

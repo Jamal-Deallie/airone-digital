@@ -1,39 +1,42 @@
-import { useRef, ReactNode } from 'react';
-import { useIsomorphicLayoutEffect } from '../hooks/useIsomorphicLayout';
+import { useRef, ReactNode, useEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-import { ScrollSmoother } from 'gsap/dist//ScrollSmoother';
+
 type Props = {
   children: ReactNode;
   ftColor?: string;
-  ftTarget?: string;
   duration?: number;
   bgColor: string;
 };
 
-const ColorChange = ({
-  children,
-  ftColor,
-  ftTarget,
-  duration,
-  bgColor,
-}: Props) => {
+const ColorChange = ({ children, ftColor, duration, bgColor }: Props) => {
   const ref = useRef<HTMLElement>(null);
+  let q = gsap.utils.selector(ref);
   const tl = useRef(null);
 
-  useIsomorphicLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-    tl.current = gsap.timeline();
 
-    const contentAnimation = tl.current.to(ref.current, {
-      duration: 1,
-      backgroundColor: bgColor,
-      ease: 'power3.in',
-    });
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    tl.current = gsap.timeline();
+    // let baseComponent = gsap.utils.selector('#baseComponent');
+
+    const contentAnimation = tl.current
+      // .to(baseComponent, {
+      //   delay: 0,
+      //   duration: 0,
+      //   css: { visibility: 'visible' },
+      // })
+
+      .to(ref.current, {
+        duration: 1,
+        backgroundColor: bgColor,
+        ease: 'power3.in',
+      });
 
     if (ftColor) {
       tl.current.add(
-        gsap.to(ftTarget, {
+        gsap.to(q('.text'), {
           color: ftColor,
           ease: 'power3.in',
           duration: duration | 1,
@@ -46,17 +49,17 @@ const ColorChange = ({
       trigger: ref.current,
       start: 'top center',
       end: 'top+=10 center',
-      markers: true,
       animation: contentAnimation,
     });
 
     return () => {
-      st.kill();
+      console.log('run');
+      st.refresh();
     };
   }, [bgColor, ref]);
 
   return (
-    <section ref={ref} className='section'>
+    <section ref={ref}>
       {children}
     </section>
   );
