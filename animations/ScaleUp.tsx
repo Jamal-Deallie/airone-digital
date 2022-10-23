@@ -33,7 +33,6 @@ const ScaleUp = ({ children, before, after, txtTarget, duration }: Props) => {
     let st = ScrollTrigger.create({
       trigger: ref.current,
       start: 'top center',
-      markers: true,
       animation: contentAnimation,
     });
 

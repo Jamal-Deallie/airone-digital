@@ -19,8 +19,6 @@ export const getStaticProps: GetStaticProps = async context => {
       console.error(error);
     });
 
-
-
   const statisticRes = await fetch(
     `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/statistics`
   )
@@ -61,7 +59,7 @@ const AboutPage: NextPage = ({ services, stats, clients }: AboutProps) => {
 
   return (
     <>
-      <Clients data={clientData} />
+      <Clients />
       <Services />
       <Awards />
       <Statistics data={statData} />

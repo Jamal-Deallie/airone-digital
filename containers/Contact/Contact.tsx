@@ -1,13 +1,14 @@
 import React from 'react';
 import Form from '../../components/Form/Form';
-import styles from '../../styles/containers/contact.module.css';
-import { GridContainer } from './styled';
+import styles from '@/styles/contact.module.css';
+
 
 type Props = {};
 
 const Contact = (props: Props) => {
   return (
-    <div className={styles.container}>
+    
+    <div className='container'>
       <div className={styles['heading']}>
         <div className={styles['header-line']}>
           <h1>{"Let's"}</h1>

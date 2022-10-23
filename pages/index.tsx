@@ -4,7 +4,7 @@ import Showreel from '../containers/Showreel/Showreel';
 import Ads from '../containers/Ads/Ads';
 import Contact from '../containers/CTA/CTA';
 import About from '../containers/About/About';
-import ServiceTitle from '../containers/ServiceTitle/ServiceTitle';
+import ServiceTitle from '../containers/AdsTitle/AdsTitle';
 import Founder from '../containers/Founder/Founder';
 
 const HomePage: NextPage = () => {

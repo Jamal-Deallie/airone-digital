@@ -36,7 +36,7 @@ const ColorChange = ({ children, ftColor, duration, bgColor }: Props) => {
 
     if (ftColor) {
       tl.current.add(
-        gsap.to(q('.text'), {
+        gsap.to(q('#text'), {
           color: ftColor,
           ease: 'power3.in',
           duration: duration | 1,

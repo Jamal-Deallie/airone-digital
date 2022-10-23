@@ -1,50 +1,112 @@
-import React from 'react';
-import { Header } from '../../components/Header/Header';
-import { InnerContainer, HeaderContainer } from './styled';
+import { useRef } from 'react';
 import Link from 'next/link';
-import StarOne from '../../svgs/StarOne';
 import StarTwo from '../../svgs/StarTwo';
-import StarDiamond from '../../svgs/StarDiamond';
-import StarCircle from '../../svgs/StarCircle';
-import styles from '../../styles/cta.module.css';
-import Image from 'next/image';
+import styles from '@/styles/cta.module.css';
+import { gsap } from 'gsap';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+import { useIsomorphicLayoutEffect } from '../../hooks/useIsomorphicLayout';
 
 type Props = {};
 
 const CTA = (props: Props) => {
+  const el = useRef();
+
+  useIsomorphicLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    let ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: el.current,
+          start: 'top top',
+          end: '500px 80%',
+          markers: true,
+        },
+      });
+
+      let heading = gsap.utils.toArray('#cta-heading');
+      let link = gsap.utils.toArray('#cta-link');
+      tl.fromTo(
+        heading,
+        { y: 100, opacity: 0 },
+        {
+          opacity: 1,
+          y: 0,
+          ease: 'back',
+          duration: 1,
+          stagger: 0.1,
+        }
+      )
+        .fromTo(
+          '#cta-text',
+          { y: 100, opacity: 0 },
+          {
+            opacity: 1,
+            y: 0,
+            ease: 'back',
+            duration: 1,
+          },
+          '-=75%'
+        )
+        .fromTo(
+          link,
+          { y: 100, opacity: 0 },
+          {
+            opacity: 1,
+            y: 0,
+            ease: 'back',
+            duration: 1,
+            stagger: 0.1,
+          },
+          '-=75%'
+        );
+    });
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div className='container primary-bg'>
-      <div>
-        <h1 className={styles.heading}>Heard</h1>
-        <h1 className={styles.heading}>Enough</h1>
-      </div>
+    <div className='primary-bg' ref={el}>
+      <div className='container'>
+        <div>
+          <h1 className={styles.heading} id='cta-heading'>
+            Heard
+          </h1>
 
-      <div className={styles['inner-cont']}>
-        <h1 className={styles['heading-lrg']}>Follow Us</h1>
-      </div>
+          <h1 className={styles.heading} id='cta-heading'>
+            Enough
+          </h1>
+        </div>
 
-      <div className={styles['link-cont']}>
-        <Link href='/'>
-          <a>DRIBBLE</a>
-        </Link>
-        <p>
-          <StarTwo newHeight={10} />
-        </p>
-        <Link href='/'>
-          <a>INSTAGRAM</a>
-        </Link>
-        <p>
-          <StarTwo newHeight={10} />
-        </p>
-        <Link href='/'>
-          <a>BEHANCE</a>
-        </Link>
-        <p>
-          <StarTwo newHeight={10} />
-        </p>
-        <Link href='/'>
-          <a>TIK TOK</a>
-        </Link>
+        <div className={styles['inner-cont']}>
+          <h1 className={styles['heading-lrg']} id='cta-text'>
+            Follow Us
+          </h1>
+        </div>
+
+        <div className={styles['link-cont']}>
+          <Link href='/'>
+            <a id='cta-link'>DRIBBLE</a>
+          </Link>
+          <p>
+            <StarTwo newHeight={10} />
+          </p>
+          <Link href='/'>
+            <a id='cta-link'>INSTAGRAM</a>
+          </Link>
+          <p>
+            <StarTwo newHeight={10} />
+          </p>
+          <Link href='/'>
+            <a id='cta-link'>BEHANCE</a>
+          </Link>
+          <p>
+            <StarTwo newHeight={10} />
+          </p>
+          <Link href='/'>
+            <a id='cta-link'>TIK TOK</a>
+          </Link>
+        </div>
       </div>
     </div>
   );

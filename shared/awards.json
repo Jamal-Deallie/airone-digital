@@ -1,56 +1,73 @@
 [
   {
     "id": 1,
-    "image": "/images/effie.png",
-    "award": "Society for Experiential Graphic Designs Award",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "number": "01",
+    "ad": "Hulk Has Boo Boo",
+    "cat": "Brand & Corporate Identity",
+    "award": "Digiday Media Awards"
   },
   {
     "id": 2,
-    "image": "/images/dandad.svg",
-    "award": "Society for Experiential Graphic Designs Award",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+    "number": "02",
+    "ad": "Colgate Floss",
+    "cat": "Fashion & Beauty",
+    "award": "Hermes Creative Awards"
   },
   {
     "id": 3,
-    "image": "/images/segd.svg",
-    "award": "Society for Experiential Graphic Designs Award",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+    "number": "03",
+    "ad": "Use a condom",
+    "cat": "Creative Effectiveness",
+    "award": "Clio Award"
   },
   {
     "id": 4,
-    "image": "/images/clio.png",
-    "award": "Society for Experiential Graphic Designs Award",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+    "number": "04",
+    "ad": "Wi-Fries",
+    "cat": "Image Creation",
+    "award": "EiQ Awards"
   },
   {
     "id": 5,
-    "image": "/images/effie.png",
-    "award": "Society for Experiential Graphic Designs Award",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "number": "05",
+    "ad": "Human Chameleons",
+    "cat": "Product/Service",
+    "award": "D&AD Impact"
   },
   {
     "id": 6,
-    "image": "/images/dandad.svg",
-    "award": "Society for Experiential Graphic Designs Award",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+    "number": "06",
+    "ad": "Wolverine",
+    "cat": "Integrated Campaign",
+    "award": "The Stella Awards"
   },
   {
     "id": 7,
-    "image": "/images/segd.svg",
-    "award": "Society for Experiential Graphic Designs Award",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+    "number": "07",
+    "ad": "Wolverine",
+    "cat": "Integrated Campaign",
+    "award": "The Stella Awards"
   },
   {
     "id": 8,
-    "image": "/images/clio.png",
-    "award": "Society for Experiential Graphic Designs Award",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+    "number": "08",
+    "ad": "Wolverine",
+    "cat": "Integrated Campaign",
+    "award": "The Stella Awards"
   },
   {
     "id": 9,
-    "image": "/images/clio.png",
-    "award": "Society for Experiential Graphic Designs Award",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+    "number": "09",
+    "ad": "Wolverine",
+    "cat": "Integrated Campaign",
+    "award": "The Stella Awards"
+  },
+
+  {
+    "id": 10,
+    "number": "10",
+    "ad": "Wolverine",
+    "cat": "Integrated Campaign",
+    "award": "The Stella Awards"
   }
 ]

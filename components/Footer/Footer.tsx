@@ -1,13 +1,5 @@
 import { useMemo, ReactNode } from 'react';
-import {
-  FooterGrid,
-  HeaderContainer,
-  FooterSection,
-  BottomContainer,
-} from './styled';
-import { Header } from '../Header/Header';
 import Link from 'next/link';
-import BodyText from '../BodyText/BodyText';
 import StarOne from '../../svgs/StarOne';
 import StarTwo from '../../svgs/StarOne';
 import StarDiamond from '../../svgs/StarDiamond';

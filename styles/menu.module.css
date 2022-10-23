@@ -1,13 +1,13 @@
-.menu-btn {
+.btn {
   position: fixed;
   bottom: 0;
   margin: var(--space-s);
   height: 5rem;
-  width: 12rem;
+  width: 15rem;
   border-radius: 5rem;
-  background-color: #1a1b1d;
+  background-color: var(--primary-variant);
   border: 1.5px solid;
-  border-color: var(--primary-variant);
+  border-color: var(--tertiary-variant);
   color: var(--primary-variant);
   overflow: hidden;
   cursor: pointer;
@@ -17,21 +17,32 @@
   justify-content: center;
   align-items: center;
   font-size: 1.9rem;
-  letter-spacing: 0.15px;
+  letter-spacing: 1px;
+}
+.btn div:first-of-type {
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  line-height: 1.5;
+  margin-left: 0.5rem;
+}
+.btn div:last-of-type {
+  position: absolute;
+  line-height: 1.5;
+
+  width: 12rem;
+  margin-right: 0.6rem;
 }
 
-.menu-label {
-  /* margin-top: 1.75rem;
-
-  font-size: 1.9rem;
+.label span {
+  display: block;
+  position: relative;
   line-height: 1;
-
-  display: flex;
-  flex-direction: column;
-
-  height: 5rem;
-  text-align: center;
-  letter-spacing: 0.15px; */
+  padding: 0px 15px;
+  font-weight: bold;
+  overflow: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+  color: #fb9501;
 }
 
 .menu-cont {
@@ -67,7 +78,7 @@
 
 .menu-link {
   font-family: var(--heading-font);
-  font-size: clamp(3.39rem, calc(0.55rem + 11.39vw), 14.21rem);
+  font-size: clamp(5.5rem, calc(0.55rem + 11.39vw), 14.21rem);
   line-height: 1;
   color: var(--secondary-variant);
   transition: color 0.3s ease-in-out;
@@ -77,6 +88,14 @@
   color: var(--tertiary-variant);
 }
 
-/* ul li:not(:first-child) {
-    padding-top: var(--space-l);
-  } */
+
+
+@media screen and (max-width: 800px) {
+  .link-cont {
+    padding: var(--space-3xl) var(--space-l-xl);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;align-items: center;
+    gap: var(--space-l-xl);
+  }
+}

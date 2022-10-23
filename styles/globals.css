@@ -51,7 +51,6 @@
 
 body {
   background-color: var(--tertiary-variant);
-  /* font-size: clamp(1.17rem, calc(1.07rem + 0.41vw), 1.57rem); */
   font-size: 1.6rem;
   overscroll-behavior: none;
   margin: 0;
@@ -162,9 +161,6 @@ h2 {
   height: 100%;
 }
 
-.bg-primary {
-  background-color: #a682fa;
-}
 
 input,
 textarea,
@@ -247,7 +243,7 @@ h3,
 h4,
 h5,
 h6 {
-  overflow-wrap: break-word;
+  /* overflow-wrap: break-word; */
 }
 h1,
 h2,

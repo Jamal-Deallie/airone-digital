@@ -1,14 +1,16 @@
-import { useEffect, useRef } from 'react';
+import { useLayoutEffect, useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-import styles from '../../styles/containers/awards.module.css';
+import styles from '@/styles/awards.module.css';
+import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayout';
+import data from '../../shared/awards.json';
 type Props = {};
 
 const Awards = (props: Props) => {
   const ref = useRef<HTMLDivElement>();
   let q = gsap.utils.selector(ref);
 
-  useEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     let tl = gsap.timeline();
     let lines = gsap.utils.toArray(q('#line'));
@@ -86,174 +88,51 @@ const Awards = (props: Props) => {
     });
 
     return () => {
-      console.log('run');
       st.refresh();
     };
   }, []);
 
   return (
+    <div className='primary-bg'>
+      <div className='container'>
+        <div className='txt-ctr'>
+          <h1 className='heading-lrg' id='award-heading'>
+            Our
+          </h1>
+          <h1 className='heading-lrg' id='award-heading'>
+          Awards
+          </h1>
+        </div>
 
-    <div className={styles.container}>
-      <div className={styles['award-header']}>
-        <div className={styles['award-header-line']}>
-          <h1>Our</h1>
-        </div>
-        <div className={styles['award-header-line']}>
-          <h1>Awards</h1>
-        </div>
-      </div>
-      <div className={styles['award-items-outer']}>
-        <div className={styles['award-items-container']} ref={ref}>
-          <div className={styles['award-items-wrap']}>
-            <div className={styles['award-item']}>
-              <div className={styles['award-item-number']} id='number'>
-                01
-              </div>
-              <div className={styles['award-item-name']} id='name'>
-                Home
-              </div>
-              <div className={styles['award-item-sub']} id='sub'>
-                Briefly about the main thing
-              </div>
-              <div className={styles['award-item-icon']} id='icon'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  strokeWidth={1.5}
-                  stroke='currentColor'
-                  className={styles['award-item-icon']}>
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    d='M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25'
-                  />
-                </svg>
-              </div>
-            </div>
+        <div className={styles['award-items-outer']}>
+          <div className={styles['award-items-container']} ref={ref}>
+            {data.map(({ id, number, ad, cat, award }) => {
+              return (
+                <>
+                  <div className={styles['award-items-wrap']} key={id}>
+                    <div className={styles['award-item']}>
+                      <div className={styles['award-item-number']} id='number'>
+                        {number}
+                      </div>
+                      <div className={styles['award-item-name']} id='name'>
+                        {ad}
+                      </div>
+                      <div className={styles['award-item-sub']} id='sub'>
+                        {cat}
+                      </div>
+                      <div className={styles['award-item-icon']} id='icon'>
+                        {award}
+                      </div>
+                    </div>
+                  </div>
+                  <div className={styles['award-line']} id='line'></div>
+                </>
+              );
+            })}
           </div>
-          <div className={styles['award-line']} id='line'></div>
-          <span className={styles['award-items-wrap']}>
-            <div className={styles['award-item']}>
-              <div className={styles['award-item-number']} id='number'>
-                02
-              </div>
-              <div className={styles['award-item-name']} id='name'>
-                About
-              </div>
-              <div className={styles['award-item-sub']} id='sub'>
-                A story about people
-              </div>
-              <div className={styles['award-item-icon']} id='icon'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  strokeWidth={1.5}
-                  stroke='currentColor'
-                  className={styles['award-item-icon']}>
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    d='M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25'
-                  />
-                </svg>
-              </div>
-            </div>
-          </span>
-          <div className={styles['award-line']} id='line'></div>
-          <span className={styles['award-items-wrap']}>
-            <div className={styles['award-item']}>
-              <div className={styles['award-item-number']} id='number'>
-                03
-              </div>
-              <div className={styles['award-item-name']} id='name'>
-                Vision
-              </div>
-              <div className={styles['award-item-sub']} id='sub'>
-                Philosophy of work
-              </div>
-              <div className={styles['award-item-icon']} id='icon'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  strokeWidth={1.5}
-                  stroke='currentColor'
-                  className={styles['award-item-icon']}>
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    d='M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25'
-                  />
-                </svg>
-              </div>
-            </div>
-          </span>
-          <div className={styles['award-line']} id='line'></div>
-          <span className={styles['award-items-wrap']}>
-            <div className={styles['award-item']}>
-              <div className={styles['award-item-number']} id='number'>
-                04
-              </div>
-              <div className={styles['award-item-name']} id='name'>
-                Projects
-              </div>
-              <div className={styles['award-item-sub']} id='sub'>
-                Our practical experiences
-              </div>
-              <div className={styles['award-item-icon']} id='icon'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  strokeWidth={1.5}
-                  stroke='currentColor'
-                  className={styles['award-item-icon']}>
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    d='M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25'
-                  />
-                </svg>
-              </div>
-            </div>
-          </span>
-          <div className={styles['award-line']} id='line'></div>
-          <span className={styles['award-items-wrap']}>
-            <div className={styles['award-item']}>
-              <div className={styles['award-item-number']} id='number'>
-                05
-              </div>
-              <div className={styles['award-item-name']} id='name'>
-                Contact
-              </div>
-              <div className={styles['award-item-sub']} id='sub'>
-                Stay in touch with us
-              </div>
-              <div className={styles['award-item-icon']} id='icon'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  strokeWidth={1.5}
-                  stroke='currentColor'
-                  className={styles['award-item-icon']}>
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    d='M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25'
-                  />
-                </svg>
-              </div>
-            </div>
-          </span>
-          <div className={styles['award-line']} id='line'></div>
         </div>
       </div>
     </div>
-
-
   );
 };
 

@@ -1,14 +1,13 @@
-import { Header } from '../../components/Header/Header';
-import { InnerContainer } from './styled';
+import styles from '@/styles/showreel.module.css';
 
 const Showreel = () => {
   return (
     <section className='bg-primary'>
-      <InnerContainer>
-        <video className='showreel-vid' autoPlay loop muted id='video'>
+      <div className={styles['inner-cont']}>
+        <video className={styles['vid']} autoPlay loop muted id='video'>
           <source src='/video/showreel.mp4' type='video/mp4' />
         </video>
-      </InnerContainer>
+      </div>
     </section>
   );
 };

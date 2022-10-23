@@ -1,18 +1,18 @@
 [
   {
     "id": 1,
-    "image": "/images/team-airone-1.png",
-    "name": "Name",
-    "title": "Title",
+    "image": "/images/team-airone-2.png",
+    "name": "Portia Hightower",
+    "title": "CEO, C0-Founder",
     "desc": "Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in",
     "reverse": false
   },
 
   {
     "id": 2,
-    "image": "/images/team-airone-2.png",
-    "name": "Name",
-    "title": "Title",
+    "image": "/images/team-airone-1.png",
+    "name": "Axl Boniface",
+    "title": "CTO",
     "desc": "Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in",
     "reverse": true
   },
@@ -20,8 +20,8 @@
   {
     "id": 3,
     "image": "/images/team-airone-3.png",
-    "name": "Name",
-    "title": "Title",
+    "name": "Renae Dannie",
+    "title": "CCO",
     "desc": "Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in",
     "reverse": false
   },
@@ -29,16 +29,24 @@
   {
     "id": 4,
     "image": "/images/team-airone-4.png",
-    "name": "Name",
-    "title": "Title",
+    "name": "Allan Stanley",
+    "title": "Visual Identity Manager",
     "desc": "Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in",
     "reverse": true
   },
   {
     "id": 5,
     "image": "/images/team-airone-5.png",
-    "name": "Name",
-    "title": "Title",
+    "name": "Allan Stanley",
+    "title": "Art Production Manager",
+    "desc": "Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in",
+    "reverse": false
+  },
+  {
+    "id": 5,
+    "image": "/images/team-airone-6.png",
+    "name": "Luanne Florrie",
+    "title": "Experience Design Manager",
     "desc": "Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in",
     "reverse": false
   }

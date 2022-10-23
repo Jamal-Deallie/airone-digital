@@ -3,7 +3,7 @@ import { useIsomorphicLayoutEffect } from '../../hooks/useIsomorphicLayout';
 import { gsap } from 'gsap';
 import Link from 'next/link';
 import data from '../../shared/links.json';
-import styles from '../../styles/menu.module.css';
+import styles from '@/styles/menu.module.css';
 
 type MenuProps = {
   Open: boolean;
@@ -28,6 +28,21 @@ const Menu = () => {
         duration: 0.1,
         css: { display: 'block' },
       })
+      .to('#menuBtnDiv', {
+        duration: 0.2,
+        y: 50,
+      })
+      .fromTo(
+        '#menuBtnDiv2',
+        {
+          duration: 0.2,
+          y: -100,
+        },
+        {
+          y: -25,
+        },
+        '-=.15'
+      )
       .fromTo(
         targets,
         { skewY: 2, yPercent: -110 },
@@ -40,19 +55,22 @@ const Menu = () => {
           stagger: {
             amount: 0.3,
           },
-        }
+        },
+        '-=50%'
       )
       .fromTo(
         links,
         { yPercent: 100, opacity: 0 },
         {
+          duration: 0.5,
           yPercent: 0,
           opacity: 1,
           stagger: {
-            amount: 0.3,
+            amount: 0.2,
           },
         }
-      );
+      ),
+      '-=50%';
   }, []);
 
   useEffect(() => {
@@ -70,10 +88,14 @@ const Menu = () => {
         role='button'
         id='btn'
         onClick={openShopMenu}
-        className={styles['menu-btn']}>
-        <div className={styles['menu-label']} id='label'>
-          <span>Menu</span>
-          {/* <span>Close</span> */}
+        className={styles['btn']}>
+        <div className={styles['label']} id='label'>
+          <span id='menuBtn'>
+            <div id='menuBtnDiv'>MENU</div>
+            <div className={styles['close']} id='menuBtnDiv2'>
+              CLOSE
+            </div>
+          </span>
         </div>
       </div>
 

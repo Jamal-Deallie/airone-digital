@@ -1,0 +1,35 @@
+.heading {
+  font-size: clamp(2.33rem, calc(0.85rem + 7.43vw), 9.77rem);
+}
+
+.header-line:nth-of-type(2) {
+  margin-left: var(--space-2xl-3xl);
+}
+
+.flex-cont {
+  max-width: 140rem;
+  margin-inline: auto;
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-m);
+}
+
+.inner-cont {
+  width: 50%;
+}
+
+@media only screen and (max-width: 800px) {
+  .inner-cont {
+    width: 100%;
+  }
+
+  .inner-cont:nth-of-type(2) {
+    margin-top: var(--space-m);
+  }
+
+  .flex-cont {
+    flex-direction: column;
+  }
+}

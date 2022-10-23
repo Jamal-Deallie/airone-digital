@@ -1,55 +1,90 @@
-import React from 'react';
-import { Header } from '../../components/Header/Header';
-import { ClientContainer, ImageContainer, Section } from './styled';
+import { useRef, useEffect, useState, useCallback } from 'react';
+import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayout';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+import SplitText from 'gsap/dist/SplitText';
 import Image from 'next/image';
 import data from '../../shared/clients.json';
+import styles from '@/styles/clients.module.css';
 type ClientProps = { data: any[] };
 
-const Clients = ({ data }: ClientProps) => {
-  console.log(data);
-  let test = data[1];
+const Clients = () => {
+  const ref = useRef();
 
-  console.log(test.image.data);
+  useIsomorphicLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger, SplitText);
+    let ctx = gsap.context(() => {
+      let splitHeading = new SplitText('#client-heading', { type: 'words' });
+
+      const tl = gsap.timeline();
+
+      tl.fromTo(
+        splitHeading.words,
+        { y: -100, opacity: 0 },
+        {
+          delay: 0.5,
+          opacity: 1,
+          y: 0,
+          ease: 'back',
+          duration: 1,
+          stagger: 0.1,
+        }
+      ).fromTo(
+        '#client-logo',
+        { yPercent: 100, opacity: 0 },
+        {
+          delay: 0.25,
+          duration: 1,
+          ease: 'sine.out',
+          yPercent: 0,
+          opacity: 1,
+          stagger: 0.1,
+        },
+        '-=30%'
+      );
+      return () => {
+        splitHeading.revert();
+      };
+    });
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <Section>
-      <div className='container'>
-        <div className='main-header'>
-          <h1>Our</h1>
-          <h1>Clients</h1>
-        </div>
-        <div>
-          <ClientContainer>
-            {data.map(({ id, image, icon, client, slug }) => {
-              // const { url} = image?.data?.attributes;
+    <div className='container ' ref={ref}>
+      <div className='txt-ctr pt-xl'>
+        <h1 className='heading-lrg  primary-clr' id='client-heading'>
+          Our
+        </h1>
+        <h1 className='heading-lrg  primary-clr' id='client-heading'>
+          Clients
+        </h1>
+      </div>
 
-              return image.data === null ? (
-                <div key={id} className='client name__cont'>
-                  <h3>{client}</h3>
-                </div>
-              ) : (
-                <ImageContainer
-                  className='client img__cont'
-                  aspect={
-                    `${image?.data?.attributes.width}` +
-                    '/' +
-                    `${image?.data?.attributes.height}`
-                  }>
-                  <Image
-                    key={id}
-                    src={
-                      `${process.env.NEXT_PUBLIC_STRAPI_URL}` +
-                      image?.data?.attributes.url
-                    }
-                    alt={client}
-                    layout='fill'
-                  />
-                </ImageContainer>
-              );
-            })}
-          </ClientContainer>
+      <div>
+        <div className={styles['flx-cont']}>
+          {data.map(({ id, icon, client, slug }) => {
+            // const { url} = image?.data?.attributes;
+
+            return icon === false ? (
+              <div className={styles['client-cont']} id='client-logo' key={id}>
+                <h3 className={styles.name}>{client}</h3>
+              </div>
+            ) : (
+              <div className={styles['img-cont']} id='client-logo' key={id}>
+                <Image
+                  className={styles.img}
+                  key={id}
+                  src={`/logos/${slug}.svg`}
+                  alt={client}
+                  layout='fill'
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
-    </Section>
+    </div>
   );
 };
 

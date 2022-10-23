@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React from 'react';
 import Image from 'next/image';
-import styles from '../../styles/containers/work.module.css';
+import styles from '@/styles/work.module.css';
 import StarOne from '../../svgs/StarOne';
 import StarTwo from '../../svgs/StarOne';
 import StarDiamond from '../../svgs/StarDiamond';
@@ -16,27 +16,15 @@ const Work = ({ results }: WorkProps) => {
   console.log(data);
 
   return (
-    <div className='container primary-bg'>
-      <div className='heading-lrg mb-xl'>
-        <div className={styles['star-cont']}>
-          <div className={styles.star} id='svg'>
-            <StarOne newHeight={25} />
-          </div>
-          <div className={styles.star} id='svg'>
-            <StarTwo newHeight={15} />
-          </div>
+    <div>
+      <div className='mb-xl'>
+        <div>
           <div>
-            <h1>Our</h1>
+          <h1 className='heading-lrg'>Our</h1>
           </div>
         </div>
         <div className='flx'>
-          <h1 className='mr-lft'>Work</h1>
-          <div className={styles.star} id='svg'>
-            <StarCircle newHeight={15} />
-          </div>
-          <div className={styles.star} id='svg'>
-            <StarTwo newHeight={20} />
-          </div>
+          <h1 className='mr-lft heading-lrg'>Work</h1>
         </div>
       </div>
       <div className={styles['grid-cont']}>

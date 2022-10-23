@@ -3,7 +3,7 @@ import type { NextPage, GetStaticProps } from 'next';
 import Work from '../containers/Work/Work';
 import useSwr from 'swr';
 import { fetcher } from './api/api.js';
-import styles from '../styles/containers/work.module.css';
+import styles from '@/styles/work.module.css';
 import cn from 'classnames';
 import { UseSanitizeResponse } from '../hooks/useSanitizeResponse';
 import { AdsResults } from '../types/index';
@@ -21,32 +21,34 @@ const WorkPage: NextPage = ({ ads }: WorkProps) => {
     { fallbackData: ads }
   );
   return (
-    <div>
-      <Work results={data} />
-      <div>
-        <button
-          className={cn(
-            pageIndex === (data && data.meta.pagination.pageCount)
-              ? [styles.active]
-              : [styles.disabled]
-          )}
-          disabled={pageIndex === 1}
-          onClick={() => setPageIndex(pageIndex - 1)}>
-          Previous
-        </button>
-        <button
-          className={cn(
-            pageIndex === (data && data.meta.pagination.pageCount)
-              ? [styles.active]
-              : [styles.disabled]
-          )}
-          disabled={pageIndex === (data && data.meta.pagination.pageCount)}
-          onClick={() => setPageIndex(pageIndex + 1)}>
-          Next
-        </button>
-        <span>{`${pageIndex} of ${
-          data && data.meta.pagination.pageCount
-        }`}</span>
+    <div className='primary-bg'>
+      <div className='container'>
+        <Work results={data} />
+        <div>
+          <button
+            className={cn(
+              pageIndex === (data && data.meta.pagination.pageCount)
+                ? [styles.active]
+                : [styles.disabled]
+            )}
+            disabled={pageIndex === 1}
+            onClick={() => setPageIndex(pageIndex - 1)}>
+            Previous
+          </button>
+          <button
+            className={cn(
+              pageIndex === (data && data.meta.pagination.pageCount)
+                ? [styles.active]
+                : [styles.disabled]
+            )}
+            disabled={pageIndex === (data && data.meta.pagination.pageCount)}
+            onClick={() => setPageIndex(pageIndex + 1)}>
+            Next
+          </button>
+          <span>{`${pageIndex} of ${
+            data && data.meta.pagination.pageCount
+          }`}</span>
+        </div>
       </div>
     </div>
   );

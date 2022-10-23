@@ -1,4 +1,4 @@
-import styles from '../../styles/services.module.css';
+import styles from '@/styles/services.module.css';
 import Creative from '../../svgs/Creative';
 import Web from '../../svgs/Web';
 import Strategy from '../../svgs/Strategy';
@@ -9,15 +9,11 @@ type Props = {};
 function Services({}: Props) {
   return (
     <div className='container'>
-      <div className={styles['heading-cont']}>
-        <div className='lrg-fz'>
-          <h1>Our</h1>
-        </div>
-        <div className='lrg-fz'>
-          <h1>Services</h1>
-        </div>
+      <div>
+        <h1 className='heading-lrg'>Our</h1>
+        <h1 className='heading-lrg mr-lft'>Services</h1>
       </div>
-      <div className={styles.desc}>
+      <div className="mr-auto mx-m">
         <p>
           Sit nemo veniam ut repudiandae quos aut quas voluptas sit repellat
           sint et unde reiciendis sed consequatur aspernatur est sint incidunt.

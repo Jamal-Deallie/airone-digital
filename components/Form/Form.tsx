@@ -1,76 +1,117 @@
-import {
-  InputHTMLAttributes,
-  FormEvent,
-  useState,
-  SyntheticEvent,
-} from 'react';
-import { FormWrap } from './styled';
+import { useEffect } from 'react';
 import Button from '../Button/Button';
+import { useForm, SubmitHandler } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
+import styles from '@/styles/form.module.css';
 
-interface FormProps extends InputHTMLAttributes<HTMLInputElement> {
-  name?: string;
-  label?: string;
-  error?: string;
-  register?: any;
-  wrapperClass?: string;
-  className?: string;
-  length?: number;
-  formData?: {};
-}
+// interface FormProps extends InputHTMLAttributes<HTMLInputElement> {
+//   name?: string;
+//   label?: string;
+//   error?: string;
+//   register?: any;
+//   wrapperClass?: string;
+//   className?: string;
+//   length?: number;
+//   formData?: {};
+// }
 
-const Form = ({
-  name,
-  length,
-  label,
-  className,
-  register,
-  error,
-}: FormProps) => {
-  
-  const onSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const formData = {};
+type FormProps = {
+  name: string;
+  phoneNumber: string;
+  email: string;
+  message: string;
+};
 
-    Array.from(event.currentTarget.elements).forEach(field => {
-      if (!(field as HTMLInputElement).name) return;
-      formData[(field as HTMLInputElement).name] = (
-        field as HTMLInputElement
-      ).value;
-    });
+const schema = yup
+  .object({
+    name: yup.string().required(),
+    phoneNumber: yup.string().required(),
+    email: yup.string().email().required(),
+    message: yup.string().required(),
+  })
+  .required();
 
+const Form = () => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<FormProps>({
+    resolver: yupResolver(schema),
+  });
+
+  const onSubmit: SubmitHandler<FormProps> = data => {
     fetch('/api/email', {
       method: 'post',
-      body: JSON.stringify(formData),
+      body: JSON.stringify(data),
     });
+    reset();
   };
 
+  // const onSubmit: SubmitHandler<FormProps> = data => {
+  //   console.log(JSON.stringify(data));
+  // };
+
+  // useEffect(() => {
+  //   reset(user)
+  // }, [user])
+
   return (
-    <form method='post' className='container' onSubmit={onSubmit}>
-      <FormWrap>
-        <div className='form__input'>
-          <input type='text' name='name' placeholder='Name' required={true} />
+    <form method='post' onSubmit={handleSubmit(onSubmit)}>
+      <div className={styles.grid}>
+        <div>
+          <div className={styles.input}>
+            <input
+              type='text'
+              name='name'
+              placeholder='Name'
+              {...register('name')}
+            />
+          </div>
+          {errors.name && <p className={styles.error}>{errors.name.message}</p>}
         </div>
-        <div className='form__input'>
-          <input
-            type='text'
-            name='phoneNumber'
-            placeholder='Phone Number'
-            required={true}
-          />
+        <div>
+          <div className={styles.input}>
+            <input
+              type='text'
+              name='phoneNumber'
+              placeholder='Phone Number'
+              {...register('phoneNumber')}
+            />
+          </div>
+          {errors.phoneNumber && (
+            <p className={styles.error}>{errors.phoneNumber.message}</p>
+          )}
         </div>
-        <div className='form__input'>
-          <input
-            type='email'
-            name='email'
-            placeholder='Email'
-            required={true}
-          />
+        <div>
+          <div className={styles.input}>
+            <input
+              type='email'
+              name='email'
+              placeholder='Email'
+              {...register('email')}
+            />
+          </div>
+          {errors.email && (
+            <p className={styles.error}>{errors.email.message}</p>
+          )}
         </div>
-        <div className='form__input message'>
-          <textarea name='Message' placeholder='Message' required={true} />
+        <div>
+          <div className={styles.input}>
+            <textarea
+              name='Message'
+              placeholder='Message'
+              {...register('message')}
+            />
+          </div>
+          {errors.message && (
+            <p className={styles.error}>{errors.message.message}</p>
+          )}
         </div>
         <Button>Submit</Button>
-      </FormWrap>
+      </div>
     </form>
   );
 };

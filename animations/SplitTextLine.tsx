@@ -4,7 +4,6 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import SplitText from 'gsap/dist/SplitText';
 import { ScrollSmoother } from 'gsap/dist//ScrollSmoother';
-import styled from 'styled-components';
 
 type PropsSplitTextLine = {
   children?: ReactNode;
@@ -50,8 +49,6 @@ function SplitTextLine({
         scrollTrigger: {
           trigger: el.current,
           start: 'top center',
-          // end: 'center top',
-          markers: true,
         },
       });
       gsap.set(split.chars, { y: '100%', opacity: 0 });
@@ -72,15 +69,9 @@ function SplitTextLine({
     [tl, cn]
   );
 
-  return <Container ref={el}>{children}</Container>;
+  return <div ref={el}>{children}</div>;
 }
 
 export default SplitTextLine;
 
 // autoRefreshEvents: "DOMContentLoaded,load,resize"
-
-export const Container = styled.div`
-  .lines {
-    overflow: hidden;
-  }
-`;

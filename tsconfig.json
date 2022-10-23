@@ -14,11 +14,15 @@
     "moduleResolution": "node",
     "isolatedModules": true,
     "jsx": "preserve",
-    "baseUrl": "./src/",
+    "baseUrl": ".",
     "paths": {
       "@/components/*": ["/components/*"],
       "@/containers/*": ["/containers/*"],
-      "@/styles/*": ["/styles/*"]
+      "@/hooks/*": ["./hooks/*"],
+      "@/styles/*": ["/styles/*"],
+      "@/animations/*": ["/animations/*"],
+      "@/svgs/*": ["/svgs/*"],
+
     }
   },
   "include": [
