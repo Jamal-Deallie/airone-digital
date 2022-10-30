@@ -1,12 +1,20 @@
 .outer-container {
   padding: var(--space-3xl) var(--space-l-xl);
   width: 100%;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 
 .inner-container {
-  padding-top: var(--space-3xl);
+  display: block;
   max-width: 90rem;
-  margin-inline: auto;
+  position: absolute;
+  height: fit-content;
+  margin: 0;
+  top: var(--space-2xl-3xl);
+  transform: translate(0, clamp(5.25rem, calc(3.79rem + 7.32vw), 10rem));
 }
 
 .heading {
@@ -63,8 +71,9 @@
 }
 
 .bot-wrap:nth-of-type(1) {
-  rotate: -35deg;
+  rotate: 35deg;
 }
+
 .bot-wrap:nth-of-type(2) {
   rotate: -35deg;
   margin-right: -3rem;

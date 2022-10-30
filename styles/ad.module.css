@@ -1,0 +1,42 @@
+.inner {
+  max-width: 55rem;
+  margin-left: auto;
+}
+
+.img-cont {
+  max-width: 55rem;
+  background: #fff;
+}
+
+.grid-cont {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  gap: var(--space-2xl-3xl);
+}
+
+.content {
+  padding-top: var(--space-2xl-3xl);
+}
+
+.wrap {
+  max-width: 55rem;
+}
+
+@media screen and (max-width: 800px) {
+  .grid-cont {
+    display: block;
+    margin-inline: auto;
+  }
+  .inner {
+    text-align: center;
+    margin-inline: auto;
+  }
+  .img-cont {
+    margin: var(--space-2xxl) auto;
+  }
+  .wrap {
+    max-width: 45rem;
+    margin-inline: auto;
+  }
+}

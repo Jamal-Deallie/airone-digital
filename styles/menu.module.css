@@ -90,12 +90,15 @@
 
 
 
+
+
 @media screen and (max-width: 800px) {
   .link-cont {
     padding: var(--space-3xl) var(--space-l-xl);
     display: flex;
     flex-direction: column;
-    justify-content: center;align-items: center;
+    justify-content: center;
+    align-items: center;
     gap: var(--space-l-xl);
   }
 }

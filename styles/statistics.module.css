@@ -51,8 +51,9 @@
 .stats-stat {
   /* font-size: clamp(1.56rem, calc(-5.45rem + 35.06vw), 19.53rem); */
   font-size: clamp(2.56rem, calc(5.45rem + 20.06vw), 28.53rem);
-  line-height: 0.9;
+  line-height: 1;
 }
+
 
 .flex-cont {
   display: flex;

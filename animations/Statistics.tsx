@@ -5,27 +5,13 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import SplitText from 'gsap/dist/SplitText';
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
-type PropsSplitTextLine = {
+type AnimationProps = {
   children?: ReactNode;
-  duration?: number;
-  delay?: number;
-  ease?: string;
-  y?: number;
-  cn?: string;
-  stagger?: number;
-  target?: string;
 };
 
-function SplitTextLine({
-  children,
-  stagger,
-  duration,
-
-  y,
-  ease,
-  cn,
-}: PropsSplitTextLine) {
+function StatisticsCol({ children }: AnimationProps) {
   let split: any;
+  let splitHeading: any;
   const component = useRef();
 
   useIsomorphicLayoutEffect(() => {
@@ -40,30 +26,47 @@ function SplitTextLine({
         },
       });
 
+      tl.fromTo(
+        '#stat-num',
+        { y: '100%' },
+        {
+          y: '0%',
+          ease: 'back',
+          duration: 1.5,
+          stagger: 0.1,
+        }
+      );
+
       function init() {
-        gsap.set('.fullScreen', { opacity: 1 });
+        gsap.set('.fullscreen', { opacity: 1 });
 
         if (split) {
           split.revert();
         }
-        split = new SplitText('#splitBody', {
+        split = new SplitText('#stat-body', {
+          linesClass: 'lines',
+        });
+        splitHeading = new SplitText('#stat-num', {
+          charsClass: 'chars',
           linesClass: 'lines',
         });
 
-        console.log(split);
-
-        tl.from(split.lines, {
-          delay: 1,
-          opacity: 0,
-          y: '50%',
-          duration: 1.5,
-          ease: 'power4.out',
-          stagger: 0.2,
-        });
+        tl.fromTo(
+          split.lines,
+          { opacity: 0, y: '50%' },
+          {
+            opacity: 1,
+            y: '0%',
+            duration: 1,
+            ease: 'power4.out',
+            stagger: 0.2,
+          },
+          '=-1'
+        );
       }
       init();
       window.addEventListener('resize', function () {
-        gsap.set('.fullScreen', { opacity: 0 });
+        gsap.set('.fullscreen', { opacity: 0 });
         // clear the timeout
         clearTimeout(timeout);
         // start timing for event "completion"
@@ -73,10 +76,7 @@ function SplitTextLine({
     }, component);
     return () => ctx.revert();
   }, []);
-
   return <div ref={component}>{children}</div>;
 }
 
-export default SplitTextLine;
-
-// autoRefreshEvents: "DOMContentLoaded,load,resize"
+export default StatisticsCol;

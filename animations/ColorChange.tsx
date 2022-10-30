@@ -53,7 +53,6 @@ const ColorChange = ({ children, ftColor, duration, bgColor }: Props) => {
     });
 
     return () => {
-      console.log('run');
       st.refresh();
     };
   }, [bgColor, ref]);

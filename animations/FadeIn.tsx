@@ -34,7 +34,6 @@ const FadeIn = ({ children, duration, delay, y }: AnimProps) => {
         start: 'top +=200px',
         end: 'bottom',
         animation: anim,
-        markers: true,
       });
 
       return () => {

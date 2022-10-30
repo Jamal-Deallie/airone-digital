@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from 'react';
+import { useRef } from 'react';
 import styles from '@/styles/adsTitle.module.css';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
@@ -13,7 +13,8 @@ const AdsTitle = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ref.current,
-        start: 'top top',
+        start: 'top 10%',
+        markers: true,
       },
     });
 

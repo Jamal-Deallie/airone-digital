@@ -37,37 +37,37 @@
   {
     "id": 6,
     "number": "06",
-    "ad": "Wolverine",
-    "cat": "Integrated Campaign",
-    "award": "The Stella Awards"
+    "ad": "Fore!!!",
+    "cat": "Focused Marketing Campaign",
+    "award": "Killer Content Awards"
   },
   {
     "id": 7,
     "number": "07",
-    "ad": "Wolverine",
-    "cat": "Integrated Campaign",
-    "award": "The Stella Awards"
+    "ad": "Get Ready",
+    "cat": "Design Concept",
+    "award": "Shorty Awards"
   },
   {
     "id": 8,
     "number": "08",
     "ad": "Wolverine",
-    "cat": "Integrated Campaign",
-    "award": "The Stella Awards"
+    "cat": "Campaign of the Year",
+    "award": "Echo Awards"
   },
   {
     "id": 9,
     "number": "09",
-    "ad": "Wolverine",
-    "cat": "Integrated Campaign",
-    "award": "The Stella Awards"
+    "ad": "Blood Saves Lives",
+    "cat": "Public Awareness Campaign",
+    "award": "Bea World Awards"
   },
 
   {
     "id": 10,
     "number": "10",
-    "ad": "Wolverine",
-    "cat": "Integrated Campaign",
-    "award": "The Stella Awards"
+    "ad": "Colgate Floss",
+    "cat": "Creativity for Good",
+    "award": "MarCom Awards"
   }
 ]

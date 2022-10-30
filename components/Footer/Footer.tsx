@@ -1,9 +1,6 @@
 import { useMemo, ReactNode } from 'react';
 import Link from 'next/link';
 import StarOne from '../../svgs/StarOne';
-import StarTwo from '../../svgs/StarOne';
-import StarDiamond from '../../svgs/StarDiamond';
-import StarCircle from '../../svgs/StarCircle';
 import styles from '../../styles/footer.module.css';
 
 type FooterProps = {
@@ -25,8 +22,7 @@ export const Footer = () => {
           <StarOne newHeight={15} />
           <h3 className={styles.heading}>AirOne Digital</h3>
           <div>
-
-          <StarOne newHeight={15} />
+            <StarOne newHeight={15} />
           </div>
         </div>
         <div className={styles['flx-cont']}>
@@ -68,6 +64,7 @@ export const Footer = () => {
               <Link href='instagram.com'>
                 <a className='links'>Instagram</a>
               </Link>
+
               <Link href='instagram.com'>
                 <a className='links'>Pinterest</a>
               </Link>

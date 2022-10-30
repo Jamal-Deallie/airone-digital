@@ -20,7 +20,6 @@ const CTA = (props: Props) => {
           trigger: el.current,
           start: 'top top',
           end: '500px 80%',
-          markers: true,
         },
       });
 

@@ -4,16 +4,16 @@ import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayout';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import SplitText from 'gsap/dist/SplitText';
+import { StatisticsResults } from '../../types/index';
+import StatisticsCol from '@/animations/Statistics';
 
-type StatisticsProps = {
-  data: any[];
+type Props = {
+  stats: StatisticsResults[];
 };
-
-const Statistics = ({ data }: StatisticsProps) => {
-  let mainData: Array<any> = ([] = data.slice(0, 2));
-  let secData: Array<any> = ([] = data.slice(2, 3));
+const Statistics = ({ stats }: Props) => {
+  let mainData: Array<any> = ([] = stats.slice(0, 2));
+  let secData: Array<any> = ([] = stats.slice(2, 3));
   const ref = useRef();
-
 
   return (
     <div className='primary-bg' ref={ref}>
@@ -32,21 +32,27 @@ const Statistics = ({ data }: StatisticsProps) => {
         </div>
         <div className={styles['inner-cont']}>
           <div className={styles['statistic-items']}>
-            {mainData.map(({ id, title, desc, stat }) => {
-              return (
-                <div key={id} className={styles['flex-cont']}>
-                  <div className={styles['desc-cont']}>
-                    <h3 className={styles.title}>{title}</h3>
-                    <div className='desc'>
-                      <p className={styles['stats-desc']}>{desc}</p>
+            <StatisticsCol>
+              {mainData.map(({ id, title, desc, stat }) => {
+                return (
+                  <div key={id} className={styles['flex-cont']}>
+                    <div className={styles['desc-cont']}>
+                      <h3 className={styles.title}>{title}</h3>
+                      <div className='desc'>
+                        <p className={styles['stats-desc']} id='stat-body'>
+                          {desc}
+                        </p>
+                      </div>
+                    </div>
+                    <div className='of-h'>
+                      <h1 className={styles['stats-stat']} id='stat-num'>
+                        {stat}
+                      </h1>
                     </div>
                   </div>
-                  <div className={styles['stats-cont']}>
-                    <h1 className={styles['stats-stat']}>{stat}</h1>
-                  </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </StatisticsCol>
           </div>
           {secData.map(({ id, title, stat, desc }) => {
             return (

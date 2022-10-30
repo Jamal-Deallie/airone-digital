@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import styles from '@/styles/founder.module.css';
 import ColorChanger from '../../animations/ColorChange';
+import Button from '@/components/Button/Button';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import SplitText from 'gsap/dist/SplitText';
@@ -113,6 +114,9 @@ const Founder = (props: Props) => {
                   elit. Et netus et malesuada fames ac. Et tortor at risus
                   viverra adipiscing at in tellus integer.
                 </p>
+              </div>
+              <div className='mt-m'>
+                <Button>LinkedIn &#8594;</Button>
               </div>
             </div>
 

@@ -5,24 +5,20 @@ export interface Advertisements {
   image: string;
 }
 export interface StatisticsResults {
-  data: [
-    {
-      id: number;
-      attributes: {
-        title: string;
-        desc: string;
-        stat: string;
-      };
-    }
-  ];
-
-  // id: number;
-  // attributes: {
-  //   title: string;
-  //   desc: string;
-  //   stat: string;
-  // };
+  stats: {
+    id: number;
+    stat: string;
+    title: string;
+    desc: string;
+  };
 }
+
+// id: number;
+// attributes: {
+//   title: string;
+//   desc: string;
+//   stat: string;
+// };
 
 export interface ServicesResults {
   data: object;

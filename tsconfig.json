@@ -16,12 +16,12 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@/components/*": ["/components/*"],
+      "@/components/*": ["./components/*"],
       "@/containers/*": ["/containers/*"],
       "@/hooks/*": ["./hooks/*"],
       "@/styles/*": ["/styles/*"],
-      "@/animations/*": ["/animations/*"],
-      "@/svgs/*": ["/svgs/*"],
+      "@/animations/*": ["./animations/*"],
+      "@/svgs/*": ["./svgs/*"],
 
     }
   },

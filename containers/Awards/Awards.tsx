@@ -1,6 +1,7 @@
 import { useLayoutEffect, useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+import SplitText from 'gsap/dist/SplitText';
 import styles from '@/styles/awards.module.css';
 import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayout';
 import data from '../../shared/awards.json';
@@ -11,15 +12,28 @@ const Awards = (props: Props) => {
   let q = gsap.utils.selector(ref);
 
   useIsomorphicLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger, SplitText);
     let tl = gsap.timeline();
     let lines = gsap.utils.toArray(q('#line'));
     let number = gsap.utils.toArray(q('#number'));
     let name = gsap.utils.toArray(q('#name'));
     let icon = gsap.utils.toArray(q('#icon'));
     let sub = gsap.utils.toArray(q('#sub'));
+    let splitHeading = new SplitText('#award-heading', { type: 'words' });
     console.log(lines);
     const contentAnimation = tl
+      .fromTo(
+        splitHeading.words,
+        { y: -100, opacity: 0 },
+        {
+          delay: 0.5,
+          opacity: 1,
+          y: 0,
+          ease: 'back',
+          duration: 1,
+          stagger: 0.1,
+        }
+      )
       .fromTo(
         lines,
         { width: '0%' },
@@ -100,7 +114,7 @@ const Awards = (props: Props) => {
             Our
           </h1>
           <h1 className='heading-lrg' id='award-heading'>
-          Awards
+            Awards
           </h1>
         </div>
 
@@ -108,8 +122,8 @@ const Awards = (props: Props) => {
           <div className={styles['award-items-container']} ref={ref}>
             {data.map(({ id, number, ad, cat, award }) => {
               return (
-                <>
-                  <div className={styles['award-items-wrap']} key={id}>
+                <div key={id}>
+                  <div className={styles['award-items-wrap']}>
                     <div className={styles['award-item']}>
                       <div className={styles['award-item-number']} id='number'>
                         {number}
@@ -126,7 +140,7 @@ const Awards = (props: Props) => {
                     </div>
                   </div>
                   <div className={styles['award-line']} id='line'></div>
-                </>
+                </div>
               );
             })}
           </div>

@@ -50,14 +50,6 @@ const Form = () => {
     reset();
   };
 
-  // const onSubmit: SubmitHandler<FormProps> = data => {
-  //   console.log(JSON.stringify(data));
-  // };
-
-  // useEffect(() => {
-  //   reset(user)
-  // }, [user])
-
   return (
     <form method='post' onSubmit={handleSubmit(onSubmit)}>
       <div className={styles.grid}>
@@ -110,7 +102,7 @@ const Form = () => {
             <p className={styles.error}>{errors.message.message}</p>
           )}
         </div>
-        <Button>Submit</Button>
+        <input type='button' value='Submit' className='btn-primary' />
       </div>
     </form>
   );

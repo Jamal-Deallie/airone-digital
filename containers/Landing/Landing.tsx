@@ -58,27 +58,28 @@ const Landing = () => {
         )
         .fromTo(
           '#arrow',
+          { y: 10 },
+          {
+            y: 0,
+            duration: 0.75,
+            repeat: -1,
+            yoyo: true,
+            ease: 'none',
+          },
+          '-=.7'
+        )
+        .fromTo(
+          '#arrow-wrap',
           { opacity: 0 },
           {
             y: 0,
             opacity: 1,
             duration: 0.75,
             ease: 'none',
-          }
-        )
-        .fromTo(
-          '#arrow',
-          { y: 10 },
-          {
-            delay: 0.5,
-            y: 0,
-            duration: 0.75,
-            repeat: -1,
-            yoyo: true,
-            ease: 'none',
-          }
+          },
+          '-=.7'
         );
-    });
+    }, ref);
 
     return () => ctx.revert();
   }, []);
@@ -133,7 +134,9 @@ const Landing = () => {
                     />
                   </div>
                 </div>
-                <h1 id='land-line'>WORLD</h1>
+                <div>
+                  <h1 id='land-line'>WORLD</h1>
+                </div>
                 <div className={styles['bot-wrap']}>
                   <div className={styles['star-bot']} id='star-land'>
                     <Image
@@ -149,15 +152,16 @@ const Landing = () => {
             </div>
           </div>
         </div>
-
-        <div className={styles['arrow-down']} id='arrow'>
-          <Image
-            alt='scroll down'
-            src={'/icons/arrw.svg'}
-            height={140}
-            width={70}
-            quality={100}
-          />
+        <div id='arrow-wrap'>
+          <div className={styles['arrow-down']} id='arrow'>
+            <Image
+              alt='scroll down'
+              src={'/icons/arrw.svg'}
+              height={140}
+              width={70}
+              quality={100}
+            />
+          </div>
         </div>
       </div>
     </div>
