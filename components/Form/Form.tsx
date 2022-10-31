@@ -5,17 +5,6 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import styles from '@/styles/form.module.css';
 
-// interface FormProps extends InputHTMLAttributes<HTMLInputElement> {
-//   name?: string;
-//   label?: string;
-//   error?: string;
-//   register?: any;
-//   wrapperClass?: string;
-//   className?: string;
-//   length?: number;
-//   formData?: {};
-// }
-
 type FormProps = {
   name: string;
   phoneNumber: string;
