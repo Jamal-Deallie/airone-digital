@@ -1,0 +1,60 @@
+/* One-up pairs */
+/* Custom pairs */
+/* One-up pairs */
+/* Custom pairs */
+.container {
+  padding: clamp(5.25rem, 3.79rem + 7.32vw, 10rem) clamp(2.63rem, 1.89rem + 3.66vw, 4.5rem) 0 clamp(2.63rem, 1.89rem + 3.66vw, 4.5rem);
+  max-width: 90rem;
+}
+
+.desc {
+  margin-top: clamp(2rem, 1.9rem + 0.49vw, 2.25rem);
+  max-width: 60rem;
+}
+
+.heading-cont {
+  max-width: 100rem;
+  position: relative;
+}
+
+.heading-cont h2 {
+  max-width: 100rem;
+  position: relative;
+}
+
+.heading {
+  overflow: hidden;
+  padding-top: 0.25rem;
+}
+.heading h2 {
+  font-size: clamp(5.25rem, 7.32vw, 10rem);
+  line-height: 1;
+  color: #683aff;
+  padding-left: 0.25rem;
+}
+
+.heading-outer {
+  position: relative;
+}
+
+.star-top {
+  height: 6vh;
+  aspect-ratio: 337/270;
+  display: inline-block;
+  position: relative;
+}
+
+.star-bottom {
+  aspect-ratio: 283/237;
+  /* display: inline-block; */
+  height: 7.5vh;
+  position: relative;
+  margin-inline: auto;
+  /* margin-top: clamp(-8.13rem, calc(-2.34rem + -26.9vw, -21.25rem; */
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}/*# sourceMappingURL=about.module.css.map */

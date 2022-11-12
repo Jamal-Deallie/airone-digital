@@ -17,12 +17,13 @@
     "baseUrl": ".",
     "paths": {
       "@/components/*": ["./components/*"],
-      "@/containers/*": ["/containers/*"],
+      "@/containers/*": ["./containers/*"],
       "@/hooks/*": ["./hooks/*"],
       "@/styles/*": ["/styles/*"],
+      "@/utils/*": ["./utils/*"],
       "@/animations/*": ["./animations/*"],
       "@/svgs/*": ["./svgs/*"],
-
+      "@/shared/*": ["./shared/*"]
     }
   },
   "include": [
@@ -35,7 +36,7 @@
     "next.config.js",
     "hooks/useLocoScroll.js",
     "contexts/SmoothScrollProvider.tsx",
-    "components/Layout/Layout.tsx"
+    "components/Layout/index.tsx"
   ],
   "exclude": ["node_modules"]
 }

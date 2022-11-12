@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import Contact from '../containers/Contact/Contact';
+import Contact from '../containers/Contact';
 
 const ContactPage: NextPage = () => {
   return <Contact />;

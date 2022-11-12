@@ -1,9 +1,0 @@
-.heading {
-  font-size: clamp(2.44rem, 20vw, 15rem);
-  line-height: 1;
-}
-
-.big-text {
-  font-size: clamp(2.44rem, 40vw, 45rem);
-  line-height: 0.9;
-}

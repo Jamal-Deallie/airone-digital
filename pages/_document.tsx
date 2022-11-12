@@ -4,11 +4,10 @@ export default function Document() {
   return (
     <Html lang='en'>
       <link
-        rel='preload'
+        href='font/Headline.woff'
         as='font'
         type='font/woff'
-        href='font/Headline.woff'
-        crossOrigin='anonymous'
+        crossOrigin="anonymous"
       />
       <link rel='stylesheet' href='https://use.typekit.net/aqa8zgq.css' />
       <Head />

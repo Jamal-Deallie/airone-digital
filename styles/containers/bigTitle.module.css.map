@@ -1,0 +1,1 @@
+{"version":3,"sources":["../utils/_variables.scss","bigTitle.module.scss","bigTitle.module.css"],"names":[],"mappings":"AAUA,iBAAA;AAWA,iBAAA;AAwBA,iBAAA;AAWA,iBAAA;ACnDA;EACE,sCAAA;EACA,gBAAA;ACAF;;ADGA;EACE,oIAAA;EACA,yBDuDgB;AEvDlB;;ADIE;EACE,sCAAA;EACA,cAAA;ACDJ;ADIE;EACE,sCAAA;EACA,gBAAA;ACFJ","file":"bigTitle.module.css"}

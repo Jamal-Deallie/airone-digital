@@ -1,0 +1,85 @@
+@use '../utils/utils' as *;
+
+.container {
+  padding-top: $space-2xl-3xl;
+
+  .outer {
+    padding: $space-2xl-3xl 0;
+    background-color: $primary-variant;
+  }
+  .inner {
+    padding-inline: $space-s-m;
+    max-width: 160rem;
+    margin-inline: auto;
+  }
+}
+
+.heading {
+  overflow: hidden;
+  @include devices(tablet) {
+    text-align: center;
+  }
+  h1 {
+    font-size: $space-2xl;
+  }
+}
+
+.desc {
+  max-width: 55rem;
+  @include devices(tablet) {
+    margin-top: $space-m;
+    text-align: center;
+    max-width: 100%;
+  }
+  padding: $space-m 0;
+  overflow: hidden;
+}
+
+.heading-cont {
+  text-align: right;
+  line-height: 0.9;
+}
+
+.subheader {
+  margin-bottom: $space-m;
+  font-size: $space-l;
+}
+
+// .outer-cont {
+//   margin-top: $space-2xl-3xl;
+//   width: 100%;
+//   margin-left: auto;
+// }
+
+.grid-cont {
+  margin-top: $space-2xl-3xl;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 100rem;
+  column-gap: $space-xl;
+  row-gap: $space-3xl;
+  margin-left: auto;
+}
+
+.grid-inner {
+  max-width: 25rem;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  transform-origin: left;
+  overflow: hidden;
+  background-color: $secondary-variant;
+}
+
+@media screen and (max-width: 800px) {
+  .grid-cont {
+    display: block;
+    margin-inline: auto;
+    width: max-content;
+  }
+  .grid-cont > * {
+    margin-top: $space-xxl;
+  }
+}

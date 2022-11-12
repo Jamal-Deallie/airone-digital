@@ -1,0 +1,72 @@
+@use '../utils/utils' as *;
+
+.line {
+  width: 100%;
+  height: 1px;
+  transform-origin: left;
+  overflow: hidden;
+  background-color: $secondary-variant;
+}
+
+.footer {
+  background-color: $primary-variant;
+  padding: $space-l-xl;
+  width: 100%;
+  height: fit-content;
+  font-size: $space-s;
+  .heading {
+    display: flex;
+
+    width: fit-content;
+    h3 {
+      font-size: $space-l-xl;
+    }
+    svg:last-child {
+      align-self: flex-end;
+      margin-left: 0.75rem;
+    }
+  }
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: $space-m $space-m;
+  }
+  .bottom {
+    margin-top: $space-l-xl;
+    width: fit-content;
+    margin-left: auto;
+    font-size: 1.2rem;
+  }
+}
+
+.col:nth-of-type(2) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-xl-2xl $space-xl-2xl;
+  position: relative;
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    a {
+      color: $secondary-variant;
+      text-transform: capitalize;
+      transition: color 0.3s ease-in-out;
+      &:hover {
+        color: $tertiary-variant;
+      }
+    }
+  }
+  .location {
+    h3 {
+      line-height: 1.3;
+      -webkit-font-smoothing: subpixel-antialiased;
+      font-size: $space-m;
+    }
+  }
+}
+
+.col:nth-of-type(1) {
+  max-width: 45rem;
+}

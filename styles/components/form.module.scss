@@ -1,0 +1,70 @@
+@use '../utils/utils' as *;
+
+.input {
+  color: $secondary-variant;
+  font-weight: none;
+}
+.input input::placeholder {
+  color: $secondary-variant;
+  font-weight: none;
+}
+
+.input:focus {
+  outline: none;
+  font-weight: 600;
+}
+
+.input > textarea {
+  height: 10.5rem;
+  resize: none;
+  padding-top: $space-s;
+}
+
+.input textarea::placeholder {
+  color: $secondary-variant;
+}
+
+.input > * {
+  height: 4.5rem;
+  width: 100%;
+  border: 1px solid $secondary-variant;
+  font-size: 1.6rem;
+  color: $secondary-variant;
+  padding-left: $space-xs;
+  background-color: transparent;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: auto;
+  gap: $space-s;
+  width: 100%;
+}
+
+.error {
+  color: #bf1650;
+}
+
+.error:before {
+  display: inline;
+  content: '⚠ ';
+}
+
+.btn {
+  padding: 10px 15px;
+  cursor: pointer;
+  border: 1.75px solid $tertiary-variant;
+  border-radius: 3px;
+  font-weight: 500;
+  outline: none;
+  transition: all 0.2s;
+  font-size: 1.6rem;
+  color: $tertiary-variant;
+  background-color: $secondary-variant;
+  transition: background-color color 250ms ease-in-out;
+  &:hover {
+    background-color: $primary-variant;
+    color: $secondary-variant;
+    border: 1.75px solid $secondary-variant;
+  }
+}

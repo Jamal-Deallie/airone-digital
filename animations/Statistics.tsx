@@ -13,11 +13,13 @@ function StatisticsCol({ children }: AnimationProps) {
   let split: any;
   let splitHeading: any;
   const component = useRef();
-
   useIsomorphicLayoutEffect(() => {
+
     let timeout;
     let delay = 250;
     let ctx = gsap.context(() => {
+      const desc = gsap.utils.toArray('#desc');
+      const titles = gsap.utils.toArray('#title');
       let tl = gsap.timeline({
         scrollTrigger: {
           trigger: component.current,
@@ -28,51 +30,36 @@ function StatisticsCol({ children }: AnimationProps) {
 
       tl.fromTo(
         '#stat-num',
-        { y: '100%' },
+        { y: '110%' },
         {
           y: '0%',
           ease: 'back',
           duration: 1.5,
           stagger: 0.1,
         }
-      );
-
-      function init() {
-        gsap.set('.fullscreen', { opacity: 1 });
-
-        if (split) {
-          split.revert();
-        }
-        split = new SplitText('#stat-body', {
-          linesClass: 'lines',
-        });
-        splitHeading = new SplitText('#stat-num', {
-          charsClass: 'chars',
-          linesClass: 'lines',
-        });
-
-        tl.fromTo(
-          split.lines,
-          { opacity: 0, y: '50%' },
+      )
+        .fromTo(
+          titles,
+          { y: '200%' },
           {
-            opacity: 1,
             y: '0%',
+            ease: 'back',
             duration: 1,
-            ease: 'power4.out',
-            stagger: 0.2,
+            stagger: 0.1,
           },
-          '=-1'
+          '.5'
+        )
+        .fromTo(
+          desc,
+          { y: '200%' },
+          {
+            y: '0%',
+            ease: 'back',
+            duration: 1.5,
+            stagger: 0.1,
+          },
+          '.7'
         );
-      }
-      init();
-      window.addEventListener('resize', function () {
-        gsap.set('.fullscreen', { opacity: 0 });
-        // clear the timeout
-        clearTimeout(timeout);
-        // start timing for event "completion"
-        timeout = setTimeout(init, delay);
-      });
-      window.addEventListener('load', init);
     }, component);
     return () => ctx.revert();
   }, []);

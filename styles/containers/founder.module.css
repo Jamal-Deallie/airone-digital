@@ -1,0 +1,94 @@
+/* One-up pairs */
+/* Custom pairs */
+/* One-up pairs */
+/* Custom pairs */
+.img {
+  width: 100%;
+  position: relative;
+  aspect-ratio: 3/2;
+  display: block;
+  margin-left: auto;
+  filter: grayscale(100%);
+}
+
+.flex {
+  padding-top: clamp(5.25rem, 3.79rem + 7.32vw, 10rem);
+  max-width: 160rem;
+  margin-inline: auto;
+  display: flex;
+  gap: clamp(5.25rem, 3.79rem + 7.32vw, 10rem) clamp(5.25rem, 3.79rem + 7.32vw, 10rem);
+}
+@media only screen and (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.container {
+  padding-top: clamp(5.25rem, 3.79rem + 7.32vw, 10rem);
+}
+
+.outer {
+  background-color: #683aff;
+  padding: clamp(5.25rem, 3.79rem + 7.32vw, 10rem) clamp(2.63rem, 1.89rem + 3.66vw, 4.5rem) 0 clamp(2.63rem, 1.89rem + 3.66vw, 4.5rem);
+}
+
+.wrap {
+  position: relative;
+  max-width: 40%;
+}
+
+.name {
+  overflow: hidden;
+}
+.name p {
+  font-weight: 300;
+  font-size: clamp(3.2rem, 2.25vw, 4.8rem);
+}
+
+.desc {
+  overflow: hidden;
+}
+
+.desc > p {
+  font-size: 1.9rem;
+}
+
+.heading h1 {
+  text-align: left;
+  margin-inline: auto;
+  font-size: clamp(2rem, 7.5vw, 20rem);
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  transform-origin: left;
+  overflow: hidden;
+  background-color: #1a1b1d;
+  margin: clamp(2rem, 1.9rem + 0.49vw, 2.25rem) 0;
+}
+
+.btn {
+  margin-top: clamp(3.94rem, 3.72rem + 1.1vw, 4.5rem);
+  cursor: pointer;
+}
+.btn a {
+  font-family: neue-haas-unica, sans-serif;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: 1.75px solid #1a1b1d;
+  border-radius: 3px;
+  font-weight: 500;
+  outline: none;
+  transition: all 0.2s;
+  font-size: 1.6rem;
+  color: #fff6df;
+  transition: background 250ms ease-in-out;
+  background: #1a1b1d;
+}
+.btn a:hover {
+  background: #683aff;
+}/*# sourceMappingURL=founder.module.css.map */

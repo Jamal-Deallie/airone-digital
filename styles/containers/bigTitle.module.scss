@@ -1,0 +1,26 @@
+@use '../utils/utils' as *;
+
+.heading {
+}
+
+.big-text {
+  font-size: clamp(2.44rem, 40vw, 45rem);
+  line-height: 0.9;
+}
+
+.container {
+  padding: $space-2xl-3xl $space-l-xl 0 $space-l-xl;
+  background-color: $primary-variant;
+}
+
+.inner {
+  h1 {
+    font-size: clamp(2.44rem, 20vw, 15rem);
+    line-height: 1;
+  }
+
+  :last-child {
+    font-size: clamp(2.44rem, 40vw, 45rem);
+    line-height: 0.9;
+  }
+}

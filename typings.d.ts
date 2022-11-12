@@ -18,19 +18,66 @@ interface Image {
   updatedAt: string;
 }
 
-export interface Adverts {
+export interface AdData {
   id: number;
   title: string;
   desc: string;
+  slug: string;
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
+  industry?: string;
   brand: string;
-  image?: Image;
+  image?: string;
+  image_width: string;
+  image_height: string;
+}
+export interface Adverts {
+  data: AdData[];
 }
 
-
 export interface Response {
-  data: Adverts[];
+  data: AdData;
   meta?: object;
+}
+
+export interface PageData {
+  pagination: {
+    page: number;
+    pageSize: number;
+    pageCount: number;
+    total: number;
+  };
+}
+
+export interface StatisticsResults {
+  stats: {
+    id: number;
+    stat: string;
+    title: string;
+    desc: string;
+  };
+}
+
+export interface ClientResults {
+  id: number;
+  client: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  slug: string;
+}
+
+export interface ServicesResults {
+  data: object;
+
+  // {
+  //   id: number;
+  //   attributes: {
+  //     slug: string;
+  //     title: string;
+  //     icon: string;
+  //     desc: string;
+  //   };
+  // };
 }

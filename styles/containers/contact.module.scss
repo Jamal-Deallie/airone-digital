@@ -1,0 +1,41 @@
+@use '../utils/utils' as *;
+
+.container {
+  min-height: calc(100vh - 10rem);
+  background-color: $primary-variant;
+  .outer {
+    padding: $space-2xl-3xl $space-l-xl;
+    .inner {
+      padding-top: $space-2xl-3xl;
+      max-width: 160rem;
+      margin-inline: auto;
+      .heading {
+        h1 {
+          // font-size: 13.5vw;
+          // font-size: 20rem;
+          // font-size: 6.77rem;
+          font-size: clamp(5.77rem, 14vw, 20rem);
+        }
+      }
+
+      .flex {
+        margin-inline: auto;
+        display: flex;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: $space-m;
+        @include devices(tablet) {
+          flex-direction: column;
+        }
+        .col {
+          width: 50%;
+          @include devices(tablet) {
+            margin: $space-m 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

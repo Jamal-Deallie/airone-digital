@@ -1,0 +1,357 @@
+/* One-up pairs */
+/* Custom pairs */
+/* One-up pairs */
+/* Custom pairs */
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+.no-scroll {
+  overflow: hidden !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff6df;
+  font-size: 1.6rem;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  color: #1a1b1d;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+h2 {
+  /* font-size: clamp(2.33rem, calc(1.39rem + 4.7vw), 8rem); */
+}
+
+.section {
+  padding: var(--space-2xl-3xl) 0;
+  width: 100%;
+  height: 100%;
+}
+
+input,
+textarea,
+select {
+  /* all: revert; */
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* 3. Allow percentage-based heights in the application */
+html,
+body {
+  height: 100%;
+}
+
+/* Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--body-font);
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* overflow-wrap: break-word; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: headline, sans-serif;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+#baseComponent {
+  visibility: hidden;
+  overflow-x: hidden;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.fullScreen {
+  opacity: 1;
+}
+
+h1 {
+  line-height: 0.9;
+}
+
+h2 {
+  line-height: 1.2;
+  letter-spacing: 1.5px;
+}
+
+h3 {
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 1.6rem;
+  font-family: neue-haas-unica, sans-serif;
+}
+
+@font-face {
+  font-family: "headline";
+  font-style: normal;
+  font-weight: normal;
+  src: local("/font/Headline.woff"), url("/font/Headline.woff") format("woff");
+}
+.links {
+  font-size: clamp(1.17rem, 1.07rem + 0.41vw, 1.56rem);
+  color: var(--secondary-variant);
+  font-family: var(--body-font);
+  text-transform: uppercase;
+}
+
+.lrg-primary {
+  font-size: clamp(2.98rem, -3.54rem + 26.08vw, 27.76rem);
+  text-transform: uppercase;
+  font-family: var(--heading-font);
+  color: var(--secondary-variant);
+  text-align: center;
+}
+
+.footer-body {
+  font-size: clamp(1.17rem, 1.07rem + 0.41vw, 1.56rem);
+  color: var(--secondary-variant);
+  font-family: var(--body-font);
+  text-transform: uppercase;
+}
+
+.icon-scroll,
+.icon-scroll::before {
+  position: absolute;
+  left: 50%;
+}
+
+.icon-scroll {
+  width: 40px;
+  height: 70px;
+  margin-left: -20px;
+  top: 50%;
+  margin-top: -35px;
+  box-shadow: inset 0 0 0 1px var(--primary-variant);
+  border-radius: 25px;
+}
+
+.icon-scroll::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: var(--primary-variant);
+  margin-left: -4px;
+  top: 8px;
+  border-radius: 4px;
+  -webkit-animation: scroll 1.5s infinite;
+          animation: scroll 1.5s infinite;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(46px);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(46px);
+  }
+}/*# sourceMappingURL=global.css.map */

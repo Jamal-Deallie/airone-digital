@@ -1,0 +1,103 @@
+@use '../utils/utils' as *;
+
+.btn {
+  position: fixed;
+  bottom: $space-s;
+  margin: $space-s;
+  height: 5rem;
+  width: 15rem;
+  border-radius: 5rem;
+  background-color: $primary-variant;
+  border: 1.5px solid;
+  border-color: $tertiary-variant;
+  color: $primary-variant;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 10;
+  font-family: $heading-font;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.9rem;
+  letter-spacing: 1px;
+
+  div:first-of-type {
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    line-height: 1.5;
+    margin-left: 0.5rem;
+  }
+
+  div:last-of-type {
+    position: absolute;
+    line-height: 1.5;
+    width: 12rem;
+    margin-right: 0.6rem;
+  }
+
+  span {
+    div {
+      display: block;
+      position: relative;
+      line-height: 1;
+      padding-inline: 1.5rem;
+      font-weight: bold;
+      overflow: hidden;
+      -webkit-font-smoothing: subpixel-antialiased;
+      color: $quaternary-variant;
+    }
+  }
+}
+
+.menu{
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 9;
+
+  .overlay {
+    width: 100%;
+    height: 100vh;
+    z-index: 9;
+    position: relative;
+    background-color: $primary-variant;
+    padding-top: $space-3xl;
+  }
+
+  .layer {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background-color: $secondary-variant;
+  }
+
+  ul {
+    padding: $space-3xl 0 0 $space-3xl;
+    @include devices(tablet) {
+      padding: $space-3xl $space-l-xl;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: $space-l-xl;
+    }
+    li {
+      font-family: $heading-font;
+      font-size: clamp(5.5rem, calc(0.55rem + 11.39vw), 14.21rem);
+      line-height: 1;
+      color: $secondary-variant;
+      transition: color 0.3s ease-in-out;
+      &:hover {
+        color: $tertiary-variant;
+      }
+    }
+  }
+}
+

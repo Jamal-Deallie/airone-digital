@@ -1,0 +1,36 @@
+@use '../utils/utils' as *;
+
+.container {
+  width: fit-content;
+  margin-inline: auto;
+  position: relative;
+  bottom: 0;
+  .outer {
+    width: 100%;
+    position: absolute;
+    display: inline-flex;
+    justify-content: center;
+    bottom: 0;
+    z-index: 1;
+    gap: 1rem;
+    background: #000;
+    button {
+      padding: 10px 15px;
+      cursor: pointer;
+      border: 1.75px solid $tertiary-variant;
+      border-radius: 3px;
+      font-weight: 500;
+      outline: none;
+      transition: all 0.2s;
+      font-size: 1.6rem;
+      color: $tertiary-variant;
+      background-color: $secondary-variant;
+      transition: background-color color 250ms ease-in-out;
+      &:hover {
+        background-color: $primary-variant;
+        color: $secondary-variant;
+        border: 1.75px solid $secondary-variant;
+      }
+    }
+  }
+}

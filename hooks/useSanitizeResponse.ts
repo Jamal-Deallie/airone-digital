@@ -6,7 +6,7 @@ export const UseSanitizeResponse = (response: any[]) => {
       title: curr.title,
       desc: curr.desc,
     };
-    console.log(curr);
+
     acc.push(item);
     return acc;
   }, []);

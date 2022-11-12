@@ -1,0 +1,17 @@
+@use '../utils/utils' as *;
+
+.container {
+  width: 100%;
+  min-height: calc(100vh - 10rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .outer {
+    text-align: center;
+    max-width: 160rem;
+    h1 {
+      font-size: $space-3xxxl;
+      color: $primary-variant;
+    }
+  }
+}

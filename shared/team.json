@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "image": "/images/team-airone-2.png",
+    "image": "https://res.cloudinary.com/dtwk4dm3g/image/upload/v1667602974/air_one/team-airone-2_x1dlwq.webp",
     "name": "Portia Hightower",
     "title": "CEO, C0-Founder",
     "desc": "Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in",
@@ -10,7 +10,7 @@
 
   {
     "id": 2,
-    "image": "/images/team-airone-1.png",
+    "image": "https://res.cloudinary.com/dtwk4dm3g/image/upload/v1667602974/air_one/team-airone-1_ioekiv.webp",
     "name": "Axl Boniface",
     "title": "CTO",
     "desc": "Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in",
@@ -19,7 +19,7 @@
 
   {
     "id": 3,
-    "image": "/images/team-airone-3.png",
+    "image": "https://res.cloudinary.com/dtwk4dm3g/image/upload/v1667602974/air_one/team-airone-3_ipdrmo.webp",
     "name": "Renae Dannie",
     "title": "CCO",
     "desc": "Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in",
@@ -28,7 +28,7 @@
 
   {
     "id": 4,
-    "image": "/images/team-airone-4.png",
+    "image": "https://res.cloudinary.com/dtwk4dm3g/image/upload/v1667602974/air_one/team-airone-4_txbglc.webp",
     "name": "Allan Stanley",
     "title": "Visual Identity Manager",
     "desc": "Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in",
@@ -36,7 +36,7 @@
   },
   {
     "id": 5,
-    "image": "/images/team-airone-5.png",
+    "image": "https://res.cloudinary.com/dtwk4dm3g/image/upload/v1667602974/air_one/team-airone-5_lqburh.webp",
     "name": "Allan Stanley",
     "title": "Art Production Manager",
     "desc": "Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in",
@@ -44,7 +44,7 @@
   },
   {
     "id": 6,
-    "image": "/images/team-airone-6.png",
+    "image": "https://res.cloudinary.com/dtwk4dm3g/image/upload/v1667603015/air_one/team-airone-6_lxxkdv.webp",
     "name": "Luanne Florrie",
     "title": "Experience Design Manager",
     "desc": "Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in",

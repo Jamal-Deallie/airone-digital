@@ -1,13 +1,19 @@
 import type { NextPage } from 'next';
-import Landing from '../containers/Landing/Landing';
-import Showreel from '../containers/Showreel/Showreel';
-import Ads from '../containers/Ads/Ads';
-import Contact from '../containers/CTA/CTA';
-import About from '../containers/About/About';
-import ServiceTitle from '../containers/AdsTitle/AdsTitle';
-import Founder from '../containers/Founder/Founder';
+import dynamic from 'next/dynamic';
+import { Suspense } from 'react';
+import Landing from '../containers/Landing';
+// import Showreel from '../containers/Showreel';
+import Ads from '../containers/Ads';
+import Contact from '../containers/CTA';
+import About from '../containers/About';
+import ServiceTitle from '../containers/BigTitle';
+import Founder from '../containers/Founder';
 
 const HomePage: NextPage = () => {
+  const ShowReel = dynamic(() => import('@/containers/Showreel'), {
+    suspense: true,
+  });
+
   return (
     <>
       <Landing />
@@ -15,7 +21,9 @@ const HomePage: NextPage = () => {
       <Founder />
       <ServiceTitle />
       <Ads />
-      <Showreel />
+      <Suspense fallback={<div>Loading...</div>}>
+        <ShowReel />
+      </Suspense>
       <Contact />
     </>
   );

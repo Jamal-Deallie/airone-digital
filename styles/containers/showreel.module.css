@@ -1,0 +1,25 @@
+/* One-up pairs */
+/* Custom pairs */
+/* One-up pairs */
+/* Custom pairs */
+.container {
+  padding-top: clamp(5.25rem, 3.79rem + 7.32vw, 10rem);
+  width: 100%;
+  background-color: #683aff;
+}
+.container .outer {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+.container .outer video {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 60vh;
+}
+.container .outer .placeholder {
+  width: 100%;
+  height: 60vh;
+  background-color: #000;
+}/*# sourceMappingURL=showreel.module.css.map */

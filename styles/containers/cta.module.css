@@ -1,0 +1,53 @@
+.heading {
+  font-size: clamp(2.33rem, 0.85rem + 7.43vw, 9.77rem);
+  text-align: center;
+  line-height: 0.9;
+}
+
+.heading:nth-of-type(1) {
+  margin-right: 19vw;
+}
+
+.heading-lrg {
+  font-size: clamp(2.33rem, 0.85rem + 7.43vw, 9.77rem);
+  margin-inline: auto;
+  text-align: center;
+}
+
+.inner-cont {
+  padding: var(--space-2xxl) 0;
+  position: relative;
+  display: flex;
+  margin-inline: auto;
+  justify-content: center;
+}
+
+.link-cont {
+  position: relative;
+  margin-top: var(--space-m);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 0.75rem;
+}
+
+.star-left {
+  aspect-ratio: 337/270;
+  height: 6vh;
+  position: relative;
+}
+
+.star-right {
+  aspect-ratio: 420/440;
+  height: 8vh;
+  position: relative;
+  margin-left: auto;
+  align-self: flex-end;
+}
+
+@media screen and (max-width: 800px) {
+  .link-cont {
+    font-size: 1.2rem;
+  }
+}/*# sourceMappingURL=cta.module.css.map */

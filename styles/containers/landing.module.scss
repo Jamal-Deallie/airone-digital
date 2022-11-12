@@ -1,0 +1,110 @@
+@use '../utils/utils' as *;
+
+.container {
+  padding-top: $space-3xl;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+}
+
+.outer {
+  width: 100%;
+  position: relative;
+  max-width: 90rem;
+}
+
+.inner {
+  display: block;
+  max-width: 90rem;
+  height: fit-content;
+  padding-top: $space-2xl-3xl;
+  margin-inline: auto;
+  position: relative;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  ul {
+    color: $primary-variant;
+    width: 100%;
+    font-size: 6.5rem;
+    text-align: center;
+    position: relative;
+    width: max-content;
+    li {
+      width: max-content;
+      margin-inline: auto;
+      position: relative;
+      padding-inline: $space-s-m;
+      h1 {
+        font-size: $space-2xl;
+        @include devices(mobile){
+          font-size: 5.25rem;
+          line-height: .9;
+        }
+      }
+    }
+
+    li:nth-of-type(1) {
+      position: relative;
+      .wrap:nth-of-type(1) {
+        rotate: -35deg;
+        position: absolute;
+        left: 0px;
+        z-index: 1;
+        top: 0px;
+        width: $space-m-l;
+        height: $space-m-l;
+      }
+      .wrap:nth-of-type(2) {
+        position: absolute;
+        rotate: -35deg;
+        right: 0rem;
+        top: 20%;
+        width: $space-m-l;
+        height: $space-m-l;
+      }
+    }
+    li:nth-of-type(4) {
+      position: relative;
+      .wrap:nth-of-type(1) {
+        rotate: -35deg;
+        position: absolute;
+        top: 20%;
+        left: 0rem;
+        z-index: 1;
+        width: $space-m-l;
+        height: $space-m-l;
+      }
+      .wrap:nth-of-type(3) {
+        position: absolute;
+        rotate: -35deg;
+        right: 0rem;
+        top: 0px;
+        width: $space-m-l;
+        height: $space-m-l;
+      }
+    }
+  }
+}
+
+.star {
+  width: $space-m-l;
+  height: $space-m-l;
+  align-self: center;
+  position: relative;
+}
+
+.arrow {
+  position: relative;
+  display: inline-block;
+  margin-inline: auto;
+  text-align: center;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+}

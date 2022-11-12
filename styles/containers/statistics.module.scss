@@ -1,0 +1,127 @@
+@use '../utils/utils' as *;
+
+.container {
+  background-color: $primary-variant;
+  padding: $space-2xl-3xl $space-l-xl;
+
+  .outer {
+    max-width: 160rem;
+    margin-inline: auto;
+    .heading {
+      overflow: hidden;
+      margin-bottom: $space-l-xl;
+      h1 {
+        font-size: $space-2xl;
+        @include devices(tablet) {
+          text-align: center;
+        }
+      }
+
+      .desc {
+        max-width: 55rem;
+        height: 100%;
+        overflow: hidden;
+        padding: $space-m 0;
+      }
+    }
+  }
+}
+
+.inner {
+  margin-top: $space-2xl;
+  max-width: 120rem;
+  margin-inline: auto;
+  .flex:nth-child(odd) {
+    flex-direction: row-reverse;
+    @include devices(tablet) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  .flex {
+    margin-top: clamp(11.09rem, calc(9.95rem + 5.69vw), 15.64rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-s $space-m;
+    @include devices(tablet) {
+      flex-direction: column;
+      text-align: center;
+    }
+    .desc {
+      overflow: hidden;
+      padding: $space-m 0;
+    }
+    .title {
+      padding-top: $space-l;
+      overflow: hidden;
+
+    }
+    .stat {
+      overflow: hidden;
+      padding: $space-m 0;
+      width: 'max-content';
+      h1 {
+        font-size: clamp(11.09rem, calc(9.95rem + 8.69vw), 25.64rem);
+        line-height: 1;
+
+        @include devices(tablet) {
+          margin-top: $space-m;
+        }
+      }
+    }
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.content {
+  max-width: 35rem;
+  h3 {
+    font-size: $space-l;
+  }
+}
+
+.footer {
+  margin-top: clamp(11.09rem, calc(9.95rem + 5.69vw), 15.64rem);
+  display: flex;
+  flex-direction: column;
+  @include devices(tablet) {
+    text-align: center;
+    gap: $space-m;
+    flex-direction: column-reverse;
+  }
+  h1 {
+    font-size: clamp(1.56rem, 25vw, 40rem);
+    line-height: 1;
+    text-align: center;
+  }
+  h3 {
+    font-size: $space-l;
+    text-align: center;
+  }
+  .desc {
+    max-width: 55rem;
+    height: 100%;
+    overflow: hidden;
+    padding-bottom: $space-m;
+    margin-inline: auto;
+  }
+}
+
+.footer-desc-cont {
+  margin-inline: auto;
+  max-width: 55rem;
+}
+
+.footer-stat {
+}
+
+@media screen and (max-width: 800px) {
+  .footer {
+  }
+}
